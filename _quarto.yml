@@ -12,6 +12,16 @@ book:
     - references.qmd
 
 bibliography: references.bib
+always_allow_html: yes
+urlcolor: blue
+toc-title: Sumário
+lang: pt-BR
+language:
+  ui:
+    chapter_name: "Capítulo "
+  label:
+    fig: "Figura "
+    tab: "Tabela "
 
 format:
   html:
@@ -21,6 +31,12 @@ format:
     code-link: true
   pdf:
     documentclass: scrreprt
-
+    toc: true
+    toc_depth: 3
+    number_sections: yes
+    extra_dependencies: flafter
+    highlight: tango
+    includes:
+     in_header: preamble.txe
 editor: visual
 
