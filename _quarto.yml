@@ -15,7 +15,10 @@ bibliography: references.bib
 
 format:
   html:
-    theme: cosmo
+    theme:
+      - cosmo
+      - r4ds.scss
+    code-link: true
   pdf:
     documentclass: scrreprt
 
