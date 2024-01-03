@@ -3,20 +3,24 @@ project:
   output-dir: docs
 book:
   title: "eprsol"
-  author: "Norah Jones"
+  author: "Darren Norris"
   date: "1/3/2024"
-  chapters:
-    - index.qmd
-    - intro.qmd
-    - summary.qmd
-    - references.qmd
-
   sidebar:
     tools: 
       - icon: github
         href: https://github.com/darrennorris/eprsol
-        text: "codigo fonte"
-  downloads: [pdf]        
+        text: "GitHub codigo fonte"
+  downloads: [pdf]
+  chapters:
+    - index.qmd
+    - part: "Apresentação"
+      chapters: 
+        - intro.qmd
+    - part: "Soluções" 
+      chapters:
+        - solutions.qmd
+        - references.qmd
+
 bibliography: references.bib
 always_allow_html: yes
 urlcolor: blue
