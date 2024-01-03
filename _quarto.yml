@@ -11,6 +11,12 @@ book:
     - summary.qmd
     - references.qmd
 
+  sidebar:
+    tools: 
+      - icon: github
+        href: https://github.com/darrennorris/eprsol
+        text: "codigo fonte"
+  downloads: [pdf]        
 bibliography: references.bib
 always_allow_html: yes
 urlcolor: blue
