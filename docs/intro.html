@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.340">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>eprsol - Introduction</title>
+<title>eprsol - Introdução</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -97,7 +97,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Apresentação</a></li><li class="breadcrumb-item"><a href="./intro.html">Introduction</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./intro.html">Apresentação</a></li><li class="breadcrumb-item"><a href="./intro.html">Introdução</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
@@ -140,7 +140,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Introdução</span></a>
   </div>
 </li>
       </ul>
@@ -176,12 +176,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Sumário</h2>
    
   <ul>
-<li><a href="#running-r-code" id="toc-running-r-code" class="nav-link active" data-scroll-target="#running-r-code">Running R code</a></li>
+<li><a href="#organiza%C3%A7%C3%A3o-do-codigo-no-livro" id="toc-organização-do-codigo-no-livro" class="nav-link active" data-scroll-target="#organiza%C3%A7%C3%A3o-do-codigo-no-livro">Organização do codigo no livro</a></li>
+  <li><a href="#running-r-code" id="toc-running-r-code" class="nav-link" data-scroll-target="#running-r-code">Running R code</a></li>
   </ul></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title"><span id="sec-apresent" class="quarto-section-identifier">Introduction</span></h1>
+<h1 class="title"><span id="sec-apresent" class="quarto-section-identifier">Introdução</span></h1>
 </div>
 
 
@@ -194,9 +195,40 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
-</header><p>This is a book created from markdown and executable code.</p>
+</header><p>O foco aqui é fornecer soluções para as questões em que você precisa executar o código R. Para as questões que requerem interpretação de figuras e compreensão das informações fornecidas nos capítulos serão fornecidas algumas dicas para ajudar e orientar as respostas individuais.</p>
+<section id="organização-do-codigo-no-livro" class="level2"><h2 class="anchored" data-anchor-id="organização-do-codigo-no-livro">Organização do codigo no livro</h2>
+<p>O codigo está organizado em etapas de processamento, com blocos de código em caixas cinzas:</p>
 <div class="cell">
-<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>codigo de R para executar</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Para segue os passos, os blocos de código precisam ser executados em sequência. Se você pular uma etapa, ou rodar fora de sequência o próximo bloco de código provavelmente não funcionará.</p>
+<p>As linhas de codigo de R dentro de cada caixa tambem preciso ser executados em sequência. O simbolo <span style=" font-weight: bold;    ">#</span> é usado para incluir comentarios sobre os passos no codgio (ou seja, linhas começando com <span style=" font-weight: bold;    ">#</span> não é codigo de executar).</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Passo 1</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>codigo de R passo <span class="dv">1</span> <span class="co"># texto e numeros tem cores diferentes</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Passo 2</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>codigo de R passo <span class="dv">2</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Passo 3</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>codigo de R passo <span class="dv">3</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Alem disso, os simbolos <span style=" font-weight: bold;    ">#&gt;</span> e/ou <span style=" font-weight: bold;    ">[1]</span> no início de uma linha indica o resultado que você verá no console de R.</p>
+<div class="cell" data-evaluate="true">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># Passo 1</span></span>
+<span><span class="fl">1</span><span class="op">+</span><span class="fl">1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>[1] 2</p>
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span></span>
+<span><span class="co"># Passo 2</span></span>
+<span><span class="va">x</span> <span class="op">&lt;-</span> <span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span>
+<span><span class="co"># Passo 3</span></span>
+<span><span class="va">x</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>[1] 2</p>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span></span>
+<span><span class="co"># Passo 4</span></span>
+<span><span class="va">x</span> <span class="op">+</span> <span class="fl">1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>[1] 3</p>
+</div>
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">1</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 2</code></pre>
 </div>
@@ -204,13 +236,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Examples from https://github.com/hadley/r4ds/blob/main/intro.qmd</p>
 <p>You can install the complete tidyverse with a single line of code:</p>
 <div class="cell">
-<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/install.packages.html">install.packages</a></span><span class="op">(</span><span class="st">"tidyverse"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>On your computer, type that line of code in the console, and then press enter to run it. R will download the packages from CRAN and install them on your computer.</p>
-<section id="running-r-code" class="level2"><h2 class="anchored" data-anchor-id="running-r-code">Running R code</h2>
+</section><section id="running-r-code" class="level2"><h2 class="anchored" data-anchor-id="running-r-code">Running R code</h2>
 <p>The previous section showed you examples of running R code. The code in the book looks like this:</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">2</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fl">1</span> <span class="op">+</span> <span class="fl">2</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3</code></pre>
 </div>

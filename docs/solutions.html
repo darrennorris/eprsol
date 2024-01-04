@@ -1,12 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.340">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
 <title>eprsol - 1&nbsp; Capítulo Escala</title>
 <style>
 code{white-space: pre-wrap;}
@@ -20,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -40,8 +70,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -60,16 +89,11 @@ ul.task-list li input[type="checkbox"] {
     "search-submit-button-title": "Enviar"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
@@ -80,13 +104,9 @@ ul.task-list li input[type="checkbox"] {
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">eprsol</a> 
         <div class="sidebar-tools-main">
@@ -102,7 +122,7 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bem-vindos</span></a>
@@ -116,15 +136,15 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Introduction</span></a>
+ <span class="menu-text">Introdução</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
@@ -133,8 +153,8 @@ ul.task-list li input[type="checkbox"] {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./solutions.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Capítulo Escala</span></span></a>
@@ -147,21 +167,58 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Sumário</h2>
+   
+  <ul>
+<li>
+<a href="#pergunta-1" id="toc-pergunta-1" class="nav-link active" data-scroll-target="#pergunta-1"><span class="header-section-number">1.1</span> Pergunta 1</a>
+  <ul class="collapse">
+<li><a href="#resposta" id="toc-resposta" class="nav-link" data-scroll-target="#resposta"><span class="header-section-number">1.1.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-2" id="toc-pergunta-2" class="nav-link" data-scroll-target="#pergunta-2"><span class="header-section-number">1.2</span> Pergunta 2</a>
+  <ul class="collapse">
+<li><a href="#resposta-1" id="toc-resposta-1" class="nav-link" data-scroll-target="#resposta-1"><span class="header-section-number">1.2.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-3" id="toc-pergunta-3" class="nav-link" data-scroll-target="#pergunta-3"><span class="header-section-number">1.3</span> Pergunta 3</a>
+  <ul class="collapse">
+<li><a href="#resposta-2" id="toc-resposta-2" class="nav-link" data-scroll-target="#resposta-2"><span class="header-section-number">1.3.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-4" id="toc-pergunta-4" class="nav-link" data-scroll-target="#pergunta-4"><span class="header-section-number">1.4</span> Pergunta 4</a>
+  <ul class="collapse">
+<li><a href="#resposta-3" id="toc-resposta-3" class="nav-link" data-scroll-target="#resposta-3"><span class="header-section-number">1.4.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-5" id="toc-pergunta-5" class="nav-link" data-scroll-target="#pergunta-5"><span class="header-section-number">1.5</span> Pergunta 5</a>
+  <ul class="collapse">
+<li><a href="#resposta-4" id="toc-resposta-4" class="nav-link" data-scroll-target="#resposta-4"><span class="header-section-number">1.5.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-6" id="toc-pergunta-6" class="nav-link" data-scroll-target="#pergunta-6"><span class="header-section-number">1.6</span> Pergunta 6</a>
+  <ul class="collapse">
+<li><a href="#resposta-5" id="toc-resposta-5" class="nav-link" data-scroll-target="#resposta-5"><span class="header-section-number">1.6.1</span> resposta</a></li>
+  </ul>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Capítulo Escala</span></h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Capítulo Escala</span>
+</h1>
 </div>
 
 
@@ -174,13 +231,138 @@ ul.task-list li input[type="checkbox"] {
   </div>
   
 
-</header>
+</header><p>Carregar os pacotes necessarios:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://r-spatial.github.io/sf/">sf</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://rspatial.org/">terra</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://darrennorris.github.io/eprdados/">eprdados</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="pergunta-1" class="level2" data-number="1.1"><h2 data-number="1.1" class="anchored" data-anchor-id="pergunta-1">
+<span class="header-section-number">1.1</span> Pergunta 1</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Sobre o objeto ramostra. Com base nos resultados obtidos, qual o área do pixel em metros quadrados? Qual o área total da paisagem em hectares e quilometros quadrados?</span></p>
+<section id="resposta" class="level3" data-number="1.1.1"><h3 data-number="1.1.1" class="anchored" data-anchor-id="resposta">
+<span class="header-section-number">1.1.1</span> resposta</h3>
+<p>Para responder a pergunta você deve revisar o conteúdo no capitulo Escala, especificamente:</p>
+<ol type="1">
+<li><p>A figura mostrando os “componentes de uma raster e suas atributos no pacote terra”.</p></li>
+<li><p>Os exemplos de codigo mostrando “como obter informações específicas através de funções específicas”.</p></li>
+</ol>
+<p>Sabemos que a sistema de coordenados é “projetado”. Assim sendo, todos os pixels no objeto tem as mesmos dimensões. Portanto, o calculo é mais simples em comparação com o caso onde a sistema de coordenados é geografica (como por exemplo latitude e longitude). Para calcular a área total do raster com um sistema de coordenadas projetado, encontramos o número total de pixels e multiplicamos pela área de cada pixel.</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">ramostra</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/terra/man/rast.html">rast</a></span><span class="op">(</span><span class="fu">eprdados</span><span class="fu">::</span><span class="va"><a href="https://darrennorris.github.io/eprdados/reference/amostra_mapbiomas_2020.html">amostra_mapbiomas_2020</a></span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">total_pixels</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/terra/man/dimensions.html">ncol</a></span><span class="op">(</span><span class="va">ramostra</span><span class="op">)</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/pkg/terra/man/dimensions.html">nrow</a></span><span class="op">(</span><span class="va">ramostra</span><span class="op">)</span></span>
+<span><span class="va">area_pixel_m2</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/pkg/terra/man/dimensions.html">res</a></span><span class="op">(</span><span class="va">ramostra</span><span class="op">)</span><span class="op">[</span><span class="fl">1</span><span class="op">]</span> <span class="op">*</span> <span class="fu"><a href="https://rdrr.io/pkg/terra/man/dimensions.html">res</a></span><span class="op">(</span><span class="va">ramostra</span><span class="op">)</span><span class="op">[</span><span class="fl">2</span><span class="op">]</span></span>
+<span><span class="va">area_paisagem_m2</span> <span class="op">&lt;-</span> <span class="va">total_pixels</span> <span class="op">*</span> <span class="va">area_pixel_m2</span></span>
+<span><span class="va">area_paisagem_m2</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 64337.77</code></pre>
+</div>
+</div>
+<p>E agora é so fazer a conversão de metros quadrados para hectares e quilometros quadrados:</p>
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># hectares</span></span>
+<span><span class="va">area_paisagem_m2</span> <span class="op">/</span> <span class="fl">10000</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.433777</code></pre>
+</div>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># quilometros quadrados</span></span>
+<span><span class="va">area_paisagem_m2</span> <span class="op">/</span> <span class="fl">1000000</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 0.06433777</code></pre>
+</div>
+</div>
+</section></section><section id="pergunta-2" class="level2" data-number="1.2"><h2 data-number="1.2" class="anchored" data-anchor-id="pergunta-2">
+<span class="header-section-number">1.2</span> Pergunta 2</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Utilizando as funções disponíveis no pacote tmap, crie mapas temáticos dos objetos ramostra_media e ramostra_modal. Inclua cópias do seu código e mapas na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e mapas.</span></p>
+<section id="resposta-1" class="level3" data-number="1.2.1"><h3 data-number="1.2.1" class="anchored" data-anchor-id="resposta-1">
+<span class="header-section-number">1.2.1</span> resposta</h3>
+<p>Para responder a pergunta você preciso trocar o nome dos objetos usado no codigo no capitulo. Por exemplo, segue o novo codigo para crie um mapa temático com o objeto <code>ramostra_media</code> . Neste caso a agregação com a média cria novos valores (incorretos), que não fazem parte da classificação MapBiomas. Assim sendo, também removemos as linhas de código que especificavam uma legenda com as classes MapBiomas.</p>
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu">tm_shape</span><span class="op">(</span><span class="va">ramostra_media</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">tm_raster</span><span class="op">(</span>style <span class="op">=</span> <span class="st">"cat"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu">tm_grid</span><span class="op">(</span>labels.format <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html">list</a></span><span class="op">(</span>big.mark <span class="op">=</span> <span class="st">""</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="fu">tm_compass</span><span class="op">(</span>position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"right"</span>, <span class="st">"bottom"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span></span>
+<span><span class="fu">tm_scale_bar</span><span class="op">(</span>breaks <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">0.05</span>, <span class="fl">0.1</span><span class="op">)</span>, text.size <span class="op">=</span> <span class="fl">1</span>, </span>
+<span>             text.color <span class="op">=</span> <span class="st">"white"</span>, position<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"right"</span>, <span class="st">"bottom"</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span><span class="fu">tm_layout</span><span class="op">(</span>legend.position <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"right"</span>,<span class="st">"top"</span><span class="op">)</span>,legend.bg.color <span class="op">=</span> <span class="st">"white"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section></section><section id="pergunta-3" class="level2" data-number="1.3"><h2 data-number="1.3" class="anchored" data-anchor-id="pergunta-3">
+<span class="header-section-number">1.3</span> Pergunta 3</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Confira o codigo e os resultados obtidos anteriormente, quando mudamos a resolução da raster ramostra (por exemplo figura 1.4). Explique o que aconteceu. Como e porque moudou os valores em cada caso (média e modal)?</span></p>
+<section id="resposta-2" class="level3" data-number="1.3.1"><h3 data-number="1.3.1" class="anchored" data-anchor-id="resposta-2">
+<span class="header-section-number">1.3.1</span> resposta</h3>
+<p>Para responder a pergunta você deve revisar o conteúdo no capitulo Escala, especificamente na seção Alterando a resolução.</p>
+<p>Preciso esclarecer e apresentar a sua entendimento sobre porque valores incorretos foram produzidas e porque a proporção de floresta moudou.</p>
+</section></section><section id="pergunta-4" class="level2" data-number="1.4"><h2 data-number="1.4" class="anchored" data-anchor-id="pergunta-4">
+<span class="header-section-number">1.4</span> Pergunta 4</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Qual é a extensão em número de pixels desse recorte (buffer.forest1.1km)?</span></p>
+<section id="resposta-3" class="level3" data-number="1.4.1"><h3 data-number="1.4.1" class="anchored" data-anchor-id="resposta-3">
+<span class="header-section-number">1.4.1</span> resposta</h3>
+<p>Para responder a pergunta você deve revisar o conteúdo no capitulo Escala, especificamente:</p>
+<ol type="1">
+<li><p>A definação de escala e extensão no contexto de Ecologia da Paisagem.</p></li>
+<li><p>A figura mostrando os “componentes de uma raster e suas atributos no pacote terra”.</p></li>
+<li><p>Os exemplos de codigo mostrando “como obter informações específicas através de funções específicas”.</p></li>
+</ol>
+<p>Com base nas informações que já conhecemos, existem diferentes opções para saber a extensão em número de pixels desse recorte <code>buffer.forest1.1km</code>. Sem R, podemos estimar assim: i) o raio foi de 1 km; ii) assim sendo, a extensão seria o diametro da buffer (raio x 2 = 2km); iii) sabemos que o comprimento de cada pixel é cerca de 29,9 metros, portanto a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.</p>
+<p>No R podemos obter o valor exato atraves funções de <code><a href="https://rdrr.io/pkg/terra/man/dimensions.html">ncol()</a></code> e <code><a href="https://rdrr.io/pkg/terra/man/dimensions.html">nrow()</a></code>, respectivamente para extensoes no sentido leste-oeste e norte-sul, assim:</p>
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/terra/man/dimensions.html">ncol</a></span><span class="op">(</span><span class="va">buffer.forest1.1km</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 68</code></pre>
+</div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/terra/man/dimensions.html">nrow</a></span><span class="op">(</span><span class="va">buffer.forest1.1km</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 68</code></pre>
+</div>
+</div>
+</section></section><section id="pergunta-5" class="level2" data-number="1.5"><h2 data-number="1.5" class="anchored" data-anchor-id="pergunta-5">
+<span class="header-section-number">1.5</span> Pergunta 5</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Usando os valores listadas acima de raio e área de floresta para os diferentes buffers circulares, calcule a proporção de floresta em cada uma das diferentes extensões de buffer. Apresente 1) os resultados incluindo cálculos. 2) um gráfico com valores de extensão no eixo x e proporção da floresta no eixo y. 3) Em menos de 200 palavras apresente a sua interpretação do gráfico.</span></p>
+<section id="resposta-4" class="level3" data-number="1.5.1"><h3 data-number="1.5.1" class="anchored" data-anchor-id="resposta-4">
+<span class="header-section-number">1.5.1</span> resposta</h3>
+<p>Com base nas informações que já conhecemos, existem diferentes opções para saber a proporção de floresta em cada uma das diferentes extensões de buffer. A proporção de floresta seria a área de floresta dividido por área total da buffer. Podemos estimar sem R, aqui ilustrando o processo com a buffer com raio de 500 metros:</p>
+<ol type="1">
+<li><p>A extensão seria o diametro da buffer (raio x 2 = 1000 m).</p></li>
+<li><p>Sabemos que a área de um círculo é pi vezes o raio elevado ao quadrado. Portanto, estimar a área do buffer em metros quadrados: pi X (raio <sup>2</sup>) = 3.14 X 250000 = 785000.</p></li>
+<li><p>Unidades diferentes (raio = metros, área em hectares), portanto calcular área do buffer em hectares. 785000 / 10000 = 78,5 hectares.</p></li>
+<li><p>Agora que temos tudo nas mesmas unidades podemos calcular a proporção de floresta. A proporção de floresta seria a área de floresta dividido por área total da buffer = 6,3 / 78,5 = 0.08. Ou seja, cerca de 8 % é floresta.</p></li>
+</ol>
+<p>E depois, repetindo o mesmo processo para os outros valores. Isso seria possivel tanto com um calculador, quanto com ferramentas de planilha como <a href="https://www.microsoft.com/pt-br/microsoft-365/excel">Excel</a> e <a href="https://pt.libreoffice.org/descobrir/calc/">Calc</a>.</p>
+<p>Podemos responder usando R assim:</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># construir uma data frame com os valores</span></span>
+<span><span class="va">raio_m</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">250</span>, <span class="fl">500</span>, <span class="fl">1000</span>,<span class="fl">2000</span>, <span class="fl">4000</span><span class="op">)</span></span>
+<span><span class="va">floresta_ha</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">6.3</span>, <span class="fl">84.3</span>, <span class="fl">502.6</span>, <span class="fl">3351</span><span class="op">)</span> </span>
+<span><span class="va">raios</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>raio_m <span class="op">=</span> <span class="va">raio_m</span>, </span>
+<span>                    floresta_ha <span class="op">=</span> <span class="va">floresta_ha</span><span class="op">)</span></span>
+<span><span class="co"># Unidades diferentes (raio = metros, área em hectares). </span></span>
+<span><span class="co"># Portanto vamos calcular área de cada buffer em hectares</span></span>
+<span><span class="co"># e fazer o grafico</span></span>
+<span><span class="va">raios</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>ext_m <span class="op">=</span> <span class="va">raio_m</span><span class="op">*</span><span class="fl">2</span>, </span>
+<span>         area_buff_m2 <span class="op">=</span> <span class="op">(</span><span class="fl">3.14</span> <span class="op">*</span> <span class="va">raio_m</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>area_buff_ha <span class="op">=</span> <span class="va">area_buff_m2</span><span class="op">/</span><span class="fl">10000</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>prop_floresta <span class="op">=</span> <span class="va">floresta_ha</span><span class="op">/</span><span class="va">area_buff_ha</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">ext_m</span>, y <span class="op">=</span> <span class="va">prop_floresta</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
+<span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"extensão - diâmetro do buffer (metros)"</span>, </span>
+<span>       y <span class="op">=</span> <span class="st">"proporção de floresta"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<p><img src="solutions_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
+</div>
+</div>
+</section></section><section id="pergunta-6" class="level2" data-number="1.6"><h2 data-number="1.6" class="anchored" data-anchor-id="pergunta-6">
+<span class="header-section-number">1.6</span> Pergunta 6</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">A modelagem multiescala quantifica as condições do ambiente em múltiplas escalas alterando o resolução ou a extensão da análise e, em seguida, avaliando qual das escalas consideradas explica melhor um padrão ou processo. Escolha 1 espécie aquático e 1 espécie terrestre que ocorram na região a montante das hidrelétricas no Rio Araguari. Com base nas diferenças entre extensões (indicados no exemplo anterior) e as características funcionais das espécies (por exemplo área de vida), escolher as extensões mais adequadas para um estudo multiescala de cada espécie.</span></p>
+<section id="resposta-5" class="level3" data-number="1.6.1"><h3 data-number="1.6.1" class="anchored" data-anchor-id="resposta-5">
+<span class="header-section-number">1.6.1</span> resposta</h3>
 
 
-
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -412,11 +594,9 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
       <a href="./intro.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introduction</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Introdução</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

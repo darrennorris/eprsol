@@ -1,6 +1,44 @@
-# Introduction {#sec-apresent .unnumbered}
+# Introdução {#sec-apresent .unnumbered}
 
-This is a book created from markdown and executable code.
+O foco aqui é fornecer soluções para as questões em que você precisa executar o código R. Para as questões que requerem interpretação de figuras e compreensão das informações fornecidas nos capítulos serão fornecidas algumas dicas para ajudar e orientar as respostas individuais.
+
+
+## Organização do codigo no livro
+
+O codigo está organizado em etapas de processamento, com blocos de código em caixas cinzas:
+
+```{r, eval=FALSE}
+codigo de R para executar
+```
+
+Para segue os passos, os blocos de código precisam ser executados em sequência. Se você pular uma etapa, ou rodar fora de sequência o próximo bloco de código provavelmente não funcionará.
+
+As linhas de codigo de R dentro de cada caixa tambem preciso ser executados em sequência. O simbolo `r kableExtra::text_spec("#", bold = TRUE)` é usado para incluir comentarios sobre os passos no codgio (ou seja, linhas começando com `r kableExtra::text_spec("#", bold = TRUE)` não é codigo de executar).
+
+```{r, eval=FALSE}
+# Passo 1
+codigo de R passo 1 # texto e numeros tem cores diferentes
+# Passo 2
+codigo de R passo 2
+# Passo 3
+codigo de R passo 3
+```
+
+Alem disso, os simbolos `r kableExtra::text_spec("#>", bold = TRUE)` e/ou `r kableExtra::text_spec("[1]", bold = TRUE)` no início de uma linha indica o resultado que você verá no console de R.
+
+```{r, echo=TRUE, results='asis', evaluate = TRUE, collapse = TRUE}
+# Passo 1
+1+1
+
+# Passo 2
+x <- 1 + 1
+# Passo 3
+x
+
+# Passo 4
+x + 1
+
+```
 
 ```{r}
 1 + 1
