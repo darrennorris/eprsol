@@ -306,7 +306,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>A figura mostrando os “componentes de uma raster e suas atributos no pacote terra”.</p></li>
 <li><p>Os exemplos de codigo mostrando “como obter informações específicas através de funções específicas”.</p></li>
 </ol>
-<p>Com base nas informações que já conhecemos, existem diferentes opções para saber a extensão em número de pixels desse recorte <code>buffer.forest1.1km</code>. Sem R, podemos estimar assim: i) o raio foi de 1 km; ii) assim sendo, a extensão seria o diametro da buffer (raio x 2 = 2km); iii) sabemos que o comprimento de cada pixel é cerca de 29,9 metros, portanto a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.</p>
+<p>Com base nas informações que já conhecemos, existem diferentes opções para saber a extensão em número de pixels desse recorte <code>buffer.forest1.1km</code>. Como o raio da buffer usado para fazer o corte foi de 1 km podemos estimar sem R, assim:</p>
+<ul>
+<li><p>i) A extensão seria o diametro da buffer (raio x 2 = 2km).</p></li>
+<li><ol start="2" type="i">
+<li>Sabemos que o resolução (comprimento) de cada pixel é cerca de 29,9 metros. Portanto, a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.</li>
+</ol></li>
+</ul>
 <p>No R podemos obter o valor exato atraves funções de <code><a href="https://rdrr.io/pkg/terra/man/dimensions.html">ncol()</a></code> e <code><a href="https://rdrr.io/pkg/terra/man/dimensions.html">nrow()</a></code>, respectivamente para extensoes no sentido leste-oeste e norte-sul, assim:</p>
 <div class="cell">
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/terra/man/dimensions.html">ncol</a></span><span class="op">(</span><span class="va">buffer.forest1.1km</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -338,7 +344,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span><span class="va">floresta_ha</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">6.3</span>, <span class="fl">84.3</span>, <span class="fl">502.6</span>, <span class="fl">3351</span><span class="op">)</span> </span>
 <span><span class="va">raios</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>raio_m <span class="op">=</span> <span class="va">raio_m</span>, </span>
 <span>                    floresta_ha <span class="op">=</span> <span class="va">floresta_ha</span><span class="op">)</span></span>
-<span><span class="co"># Unidades diferentes (raio = metros, área em hectares). </span></span>
+<span><span class="co"># Unidades diferentes (raio em metros, área em hectares). </span></span>
 <span><span class="co"># Portanto vamos calcular área de cada buffer em hectares</span></span>
 <span><span class="co"># e fazer o grafico</span></span>
 <span><span class="va">raios</span> <span class="op">|&gt;</span> </span>

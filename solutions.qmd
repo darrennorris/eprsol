@@ -144,7 +144,11 @@ Para responder a pergunta você deve revisar o conteúdo no capitulo Escala, esp
 
 3.  Os exemplos de codigo mostrando "como obter informações específicas através de funções específicas".
 
-Com base nas informações que já conhecemos, existem diferentes opções para saber a extensão em número de pixels desse recorte `buffer.forest1.1km`. Sem R, podemos estimar assim: i) o raio foi de 1 km; ii) assim sendo, a extensão seria o diametro da buffer (raio x 2 = 2km); iii) sabemos que o comprimento de cada pixel é cerca de 29,9 metros, portanto a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.
+Com base nas informações que já conhecemos, existem diferentes opções para saber a extensão em número de pixels desse recorte `buffer.forest1.1km`. Como o raio da buffer usado para fazer o corte foi de 1 km podemos estimar sem R, assim:
+
+-   i\) A extensão seria o diametro da buffer (raio x 2 = 2km).
+
+-    ii) Sabemos que o resolução (comprimento) de cada pixel é cerca de 29,9 metros. Portanto, a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.
 
 No R podemos obter o valor exato atraves funções de `ncol()` e `nrow()`, respectivamente para extensoes no sentido leste-oeste e norte-sul, assim:
 
@@ -185,7 +189,7 @@ raio_m <-  c(250, 500, 1000,2000, 4000)
 floresta_ha <- c(0, 6.3, 84.3, 502.6, 3351) 
 raios <- data.frame(raio_m = raio_m, 
                     floresta_ha = floresta_ha)
-# Unidades diferentes (raio = metros, área em hectares). 
+# Unidades diferentes (raio em metros, área em hectares). 
 # Portanto vamos calcular área de cada buffer em hectares
 # e fazer o grafico
 raios |> 
