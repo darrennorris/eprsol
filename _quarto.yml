@@ -2,7 +2,7 @@ project:
   type: book
   output-dir: docs
 book:
-  title: "eprsol"
+  title: "Ecologia de Paisagems com R: soluções"
   author: "Darren Norris"
   date: "1/3/2024"
   sidebar:
@@ -18,7 +18,8 @@ book:
         - intro.qmd
     - part: "Soluções" 
       chapters:
-        - solutions.qmd
+        - solutions01_escala.qmd
+        - solutions02_metricas.qmd
         - references.qmd
 
 bibliography: references.bib
@@ -47,7 +48,6 @@ format:
     number_sections: true
     extra_dependencies: flafter
     highlight: tango
-    includes:
-     in_header: preamble.txe
+    include-in-header: preamble.txe
 editor: visual
 

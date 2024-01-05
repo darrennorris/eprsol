@@ -1,0 +1,126 @@
+# Capítulo Métricas
+
+```{r}
+#| label: pacotes
+#| warning: false
+#| message: false
+#| echo: false
+
+library(tidyverse)
+library(kableExtra)
+library(eprdados)
+library(landscapemetrics)
+```
+
+Carregar os pacotes necessarios:
+
+```{r}
+#| label: pacotes-show
+#| warning: false
+#| message: false
+#| echo: true
+#| eval: false
+
+library(tidyverse)
+library(sf)
+library(terra)
+library(eprdados)
+library(landscapemetrics)
+```
+
+## Pergunta 1
+
+`r kableExtra::text_spec("Descreva brevemente 2 métricas de cada nível (patch, class, landscape) usando ajudar (usando ? e/ou list_lsm), aulas () e/ou a leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises). Incluindo na descrição - o nome, porque serve, unidades de medida, e relevância ecológica.", color = "blue", bold = TRUE)`
+
+### resposta
+
+Para responder a pergunta você deve revisar as aulas e o conteúdo no capitulo Métrica. Métricas (descrição - o nome, porque serve, unidades de medida, e relevância ecológica) para todos os níveis foram apresentadas nas aulas "Métricas da paisagem: Modelo mancha-corredor-matriz" e "Índicesde Paisagem e Análises de Padrões Espaciais".
+
+1.  Nível de mancha - tamanho da mancha.
+2.  Nível de classe - tamanho média das manchas.
+3.  Nível de paisagem - tamanho média das manchas.
+
+Podemos verificar as métricas disponíveis no pacote `landscapemetrics` com o seguinte código:
+
+```{r}
+#| label: help-metrics
+#| warning: false
+#| message: false
+#| echo: true
+
+
+
+```
+
+## Pergunta 2
+
+`r kableExtra::text_spec("O modelo mancha-corredor-matriz é frequentemente adotado na ecologia da paisagem. Com base nas aulas teóricas e usando os valores no objeto minha_amostra_1000 apresentados na tabela acima, identificar qual classe representar a matriz na paisagem. Há alguma informação faltando que limita a sua capacidade de identificar qual classe representar a matriz? Se sim, o que precisa ser adicionado? Justifique as suas respostas de forma clara e concisa.", color = "blue", bold = TRUE)`
+
+### resposta
+
+Para responder a pergunta você preciso entender a definação da "matriz" no contexto de Ecologia da Paisagem - modelo de mancha-corrredor-matriz (aula - Métricas da paisagem: Modelo mancha-corredor-matriz). Neste caso, class 0 é o classe dominante - com a área core cobrindo quase 67% da paisagem. Assim sendo, classe 0 e a matriz.
+
+## Pergunta 3
+
+`r kableExtra::text_spec("Em vez de extensão, você preciso incluir o tamanho (área do circulo) correspondente a cada raio. Incluir uma cópia do código ajustado para produzir uma figura com tamanho (área em quilômetros quadrados) no eixo x.", color = "blue", bold = TRUE)`
+
+### resposta
+
+Seguindo o exemplo do capítulo, sabemos que os buffers têm formato de círculo, potanto:
+
+1.  A extensão seria o diametro da buffer (raio x 2).
+
+2.  Sabemos que a área de um círculo é pi vezes o raio elevado ao quadrado. Portanto, estimar a área do buffer em metros quadrados: pi X (raio ^2^).
+
+3.  E para finalizar converta o valor da área em quilômetros quadrados.
+
+No R, podemos fazer isso, ajustando o codigo no capítulo com a função `mutate()`. Usamos `mutate()` para fazer novas colunas com o valor da área em metros quadrados `area_m2` e quilômetros quadrados `area_km2`. Mantemos os nomes curtos, e depois atualize o rótulo do eixo para refletir a área, especificando o nome do eixo `x` com a função `labs()`.
+
+```{r}
+#| label: data-pergunta3
+#| warning: false
+#| message: false
+#| echo: true
+#| eval: true
+
+amostras_metrica |> 
+  filter(class==1) |> 
+  mutate(ext_m = 2*raio, 
+         area_m2 = 3.14*(raio^2)) |> 
+  mutate(area_km2 = area_m2/1000000) |>
+  ggplot(aes(x = area_km2, y = value)) + 
+  geom_point() + 
+  geom_line() +
+  labs(x = "Área (quilômetros quadrados)", 
+       y = "Área central de floresta (porcentagem da paisagem)") + 
+  theme(text = element_text(size = 14))
+```
+
+## Pergunta 4
+
+`r kableExtra::text_spec("Em menos de 200 palavras apresente a sua interpretação do gráfico em figura 5.2.", color = "blue", bold = TRUE)`
+
+### resposta
+
+A proporção da floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A relação não é linear. 
+
+## Pergunta 5
+
+`r kableExtra::text_spec("Comparar os resultados apresentados nas figuras com modelos lineares e não-lineares. Como podemos estabelecer qual seria o melhor modelo? Qual modelo seria mais adequado para identificar limiares no padrão de área central de floresta?", color = "blue", bold = TRUE)`
+
+### resposta
+
+Uma inspeção visual sugere que um modelo linear sem qualquer transformação é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Os modelos melhorariam (por exemplo os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer.
+
+
+#### Pergunta 6
+
+`r kableExtra::text_spec("Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os graficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.", color = "blue", bold = TRUE)`
+
+### resposta
+
+## Pergunta 7
+
+`r kableExtra::text_spec("Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no tutorial, selecione pelo menos oito métricas de nível classe para caracterizar a paisagem de estudo e objectivos da sua projeto. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.", color = "blue", bold = TRUE)`
+
+### resposta

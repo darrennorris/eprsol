@@ -148,7 +148,9 @@ Com base nas informações que já conhecemos, existem diferentes opções para 
 
 -   i\) A extensão seria o diametro da buffer (raio x 2 = 2km).
 
--    ii) Sabemos que o resolução (comprimento) de cada pixel é cerca de 29,9 metros. Portanto, a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.
+-   
+
+    ii) Sabemos que o resolução (comprimento) de cada pixel é cerca de 29,9 metros. Portanto, a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.
 
 No R podemos obter o valor exato atraves funções de `ncol()` e `nrow()`, respectivamente para extensoes no sentido leste-oeste e norte-sul, assim:
 
