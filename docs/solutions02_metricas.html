@@ -210,13 +210,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <a href="#pergunta-5" id="toc-pergunta-5" class="nav-link" data-scroll-target="#pergunta-5"><span class="header-section-number">2.5</span> Pergunta 5</a>
   <ul class="collapse">
 <li><a href="#resposta-4" id="toc-resposta-4" class="nav-link" data-scroll-target="#resposta-4"><span class="header-section-number">2.5.1</span> resposta</a></li>
-  <li><a href="#resposta-5" id="toc-resposta-5" class="nav-link" data-scroll-target="#resposta-5"><span class="header-section-number">2.5.2</span> resposta</a></li>
   </ul>
 </li>
   <li>
-<a href="#pergunta-7" id="toc-pergunta-7" class="nav-link" data-scroll-target="#pergunta-7"><span class="header-section-number">2.6</span> Pergunta 7</a>
+<a href="#pergunta-6" id="toc-pergunta-6" class="nav-link" data-scroll-target="#pergunta-6"><span class="header-section-number">2.6</span> Pergunta 6</a>
   <ul class="collapse">
-<li><a href="#resposta-6" id="toc-resposta-6" class="nav-link" data-scroll-target="#resposta-6"><span class="header-section-number">2.6.1</span> resposta</a></li>
+<li><a href="#resposta-5" id="toc-resposta-5" class="nav-link" data-scroll-target="#resposta-5"><span class="header-section-number">2.6.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-7" id="toc-pergunta-7" class="nav-link" data-scroll-target="#pergunta-7"><span class="header-section-number">2.7</span> Pergunta 7</a>
+  <ul class="collapse">
+<li><a href="#resposta-6" id="toc-resposta-6" class="nav-link" data-scroll-target="#resposta-6"><span class="header-section-number">2.7.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-8" id="toc-pergunta-8" class="nav-link" data-scroll-target="#pergunta-8"><span class="header-section-number">2.8</span> Pergunta 8</a>
+  <ul class="collapse">
+<li><a href="#resposta-7" id="toc-resposta-7" class="nav-link" data-scroll-target="#resposta-7"><span class="header-section-number">2.8.1</span> resposta</a></li>
   </ul>
 </li>
   </ul></nav>
@@ -251,19 +262,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><span style=" font-weight: bold;    color: blue !important;">Descreva brevemente 2 métricas de cada nível (patch, class, landscape) usando ajudar (usando ? e/ou list_lsm), aulas () e/ou a leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises). Incluindo na descrição - o nome, porque serve, unidades de medida, e relevância ecológica.</span></p>
 <section id="resposta" class="level3" data-number="2.1.1"><h3 data-number="2.1.1" class="anchored" data-anchor-id="resposta">
 <span class="header-section-number">2.1.1</span> resposta</h3>
-<p>Para responder a pergunta você deve revisar as aulas e o conteúdo no capitulo Métrica. Métricas (descrição - o nome, porque serve, unidades de medida, e relevância ecológica) para todos os níveis foram apresentadas nas aulas “Métricas da paisagem: Modelo mancha-corredor-matriz” e “Índicesde Paisagem e Análises de Padrões Espaciais”.</p>
+<p>Para responder a pergunta você deve revisar as aulas e o conteúdo no capitulo Métrica. Métricas (descrição - o nome, porque serve, unidades de medida, e relevância ecológica) para todos os níveis foram apresentadas nas aulas “Métricas da paisagem: Modelo mancha-corredor-matriz” e “Índices de Paisagem e Análises de Padrões Espaciais”. Exemplo com uma métrica tamanho (área):</p>
 <ol type="1">
 <li>Nível de mancha - tamanho da mancha.</li>
 <li>Nível de classe - tamanho média das manchas.</li>
 <li>Nível de paisagem - tamanho média das manchas.</li>
 </ol>
-<p>Podemos verificar as métricas disponíveis no pacote <code>landscapemetrics</code> com o seguinte código:</p>
+<p>Podemos verificar as métricas disponíveis no pacote <a href="https://r-spatialecology.github.io/landscapemetrics/">landscapemetrics</a> com o seguinte código:</p>
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># ajudar para entender a função</span></span>
+<span><span class="op">?</span><span class="fu"><a href="https://r-spatialecology.github.io/landscapemetrics/reference/list_lsm.html">list_lsm</a></span><span class="op">(</span><span class="op">)</span></span>
+<span><span class="co"># Nível de mancha</span></span>
+<span><span class="fu">landscapemetrics</span><span class="fu">::</span><span class="fu"><a href="https://r-spatialecology.github.io/landscapemetrics/reference/list_lsm.html">list_lsm</a></span><span class="op">(</span>level <span class="op">=</span> <span class="st">"patch"</span>, type <span class="op">=</span> <span class="st">"area and edge metric"</span><span class="op">)</span></span>
+<span><span class="op">?</span><span class="fu">landscapemetrics</span><span class="fu">::</span><span class="va"><a href="https://r-spatialecology.github.io/landscapemetrics/reference/list_lsm.html">list_lsm</a></span></span>
+<span><span class="co"># Nível de classe</span></span>
+<span><span class="fu">landscapemetrics</span><span class="fu">::</span><span class="fu"><a href="https://r-spatialecology.github.io/landscapemetrics/reference/list_lsm.html">list_lsm</a></span><span class="op">(</span>level <span class="op">=</span> <span class="st">"class"</span>, type <span class="op">=</span> <span class="st">"area and edge metric"</span><span class="op">)</span></span>
+<span><span class="op">?</span><span class="fu">landscapemetrics</span><span class="fu">::</span><span class="va"><a href="https://r-spatialecology.github.io/landscapemetrics/reference/list_lsm.html">list_lsm</a></span></span>
+<span><span class="co"># Nível de paisagem</span></span>
+<span><span class="fu">landscapemetrics</span><span class="fu">::</span><span class="fu"><a href="https://r-spatialecology.github.io/landscapemetrics/reference/list_lsm.html">list_lsm</a></span><span class="op">(</span>level <span class="op">=</span> <span class="st">"landscape"</span>, type <span class="op">=</span> <span class="st">"area and edge metric"</span><span class="op">)</span></span>
+<span><span class="op">?</span><span class="fu">landscapemetrics</span><span class="fu">::</span><span class="va"><a href="https://r-spatialecology.github.io/landscapemetrics/reference/list_lsm.html">list_lsm</a></span></span>
+<span></span>
+<span><span class="co"># todos as métricas com area</span></span>
+<span><span class="fu">landscapemetrics</span><span class="fu">::</span><span class="fu"><a href="https://r-spatialecology.github.io/landscapemetrics/reference/list_lsm.html">list_lsm</a></span><span class="op">(</span>metric <span class="op">=</span> <span class="st">"area"</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 </section></section><section id="pergunta-2" class="level2" data-number="2.2"><h2 data-number="2.2" class="anchored" data-anchor-id="pergunta-2">
 <span class="header-section-number">2.2</span> Pergunta 2</h2>
 <p><span style=" font-weight: bold;    color: blue !important;">O modelo mancha-corredor-matriz é frequentemente adotado na ecologia da paisagem. Com base nas aulas teóricas e usando os valores no objeto minha_amostra_1000 apresentados na tabela acima, identificar qual classe representar a matriz na paisagem. Há alguma informação faltando que limita a sua capacidade de identificar qual classe representar a matriz? Se sim, o que precisa ser adicionado? Justifique as suas respostas de forma clara e concisa.</span></p>
 <section id="resposta-1" class="level3" data-number="2.2.1"><h3 data-number="2.2.1" class="anchored" data-anchor-id="resposta-1">
 <span class="header-section-number">2.2.1</span> resposta</h3>
-<p>Para responder a pergunta você preciso entender a definação da “matriz” no contexto de Ecologia da Paisagem - modelo de mancha-corrredor-matriz (aula - Métricas da paisagem: Modelo mancha-corredor-matriz). Neste caso, class 0 é o classe dominante - com a área core cobrindo quase 67% da paisagem. Assim sendo, classe 0 e a matriz.</p>
+<p>Para responder a pergunta você preciso entender a definação da “matriz” no contexto de Ecologia da Paisagem - modelo de mancha-corrredor-matriz (aula - Métricas da paisagem: Modelo mancha-corredor-matriz). Neste caso, class 0 é o classe dominante - com a área core cobrindo quase 67% da paisagem. Assim sendo, classe 0 e a matriz. Não há necessidade de informações adicionais. Se os valores estivessem menores e mais próximos (por exemplo, 41 e 44%), provavelmente precisaríamos incluir métricas adicionais para representar padrões espaciais na paisagem, como coesão, tamanho do maior mancha etca.</p>
 </section></section><section id="pergunta-3" class="level2" data-number="2.3"><h2 data-number="2.3" class="anchored" data-anchor-id="pergunta-3">
 <span class="header-section-number">2.3</span> Pergunta 3</h2>
 <p><span style=" font-weight: bold;    color: blue !important;">Em vez de extensão, você preciso incluir o tamanho (área do circulo) correspondente a cada raio. Incluir uma cópia do código ajustado para produzir uma figura com tamanho (área em quilômetros quadrados) no eixo x.</span></p>
@@ -275,9 +302,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Sabemos que a área de um círculo é pi vezes o raio elevado ao quadrado. Portanto, estimar a área do buffer em metros quadrados: pi X (raio <sup>2</sup>).</p></li>
 <li><p>E para finalizar converta o valor da área em quilômetros quadrados.</p></li>
 </ol>
-<p>No R, podemos fazer isso, ajustando o codigo no capítulo com a função <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>. Usamos <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> para fazer novas colunas com o valor da área em metros quadrados <code>area_m2</code> e quilômetros quadrados <code>area_km2</code>. Mantemos os nomes curtos, e depois atualize o rótulo do eixo para refletir a área, especificando o nome do eixo <code>x</code> com a função <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code>.</p>
+<p>No R, podemos fazer isso, ajustando o codigo no capítulo com a função <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code>. Usamos <code><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate()</a></code> para fazer novas colunas com o valor da área em metros quadrados <code>area_m2</code> e quilômetros quadrados <code>area_km2</code>. Mantemos os nomes curtos, e depois atualize o rótulo do eixo para refletir a nova coluna com valores de área, especificando o nome do eixo <code>x</code> com a função <code><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs()</a></code>.</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">amostras_metrica</span> <span class="op">|&gt;</span> </span>
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">amostras_metrica</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">class</span><span class="op">==</span><span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>ext_m <span class="op">=</span> <span class="fl">2</span><span class="op">*</span><span class="va">raio</span>, </span>
 <span>         area_m2 <span class="op">=</span> <span class="fl">3.14</span><span class="op">*</span><span class="op">(</span><span class="va">raio</span><span class="op">^</span><span class="fl">2</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
@@ -286,7 +313,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/labs.html">labs</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Área (quilômetros quadrados)"</span>, </span>
-<span>       y <span class="op">=</span> <span class="st">"Área central de floresta (porcentagem da paisagem)"</span><span class="op">)</span> <span class="op">+</span> </span>
+<span>       y <span class="op">=</span> <span class="st">"Área central de floresta\n(porcentagem da paisagem)"</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html">theme</a></span><span class="op">(</span>text <span class="op">=</span> <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/element.html">element_text</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">14</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <p><img src="solutions02_metricas_files/figure-html/data-pergunta3-1.png" class="img-fluid" width="672"></p>
@@ -297,23 +324,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><span style=" font-weight: bold;    color: blue !important;">Em menos de 200 palavras apresente a sua interpretação do gráfico em figura 5.2.</span></p>
 <section id="resposta-3" class="level3" data-number="2.4.1"><h3 data-number="2.4.1" class="anchored" data-anchor-id="resposta-3">
 <span class="header-section-number">2.4.1</span> resposta</h3>
-<p>A proporção da floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A relação não é linear.</p>
+<p>A proporção de floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A proporção de floresta aumenta de zero a 51 por cento, mas a relação não é linear. Os valores aumentam rapidamente até extensões de 8 km (6% por quilometro em média entre 0 e 8 quilômetros). Após isso a curva parece atingir uma assíntota (aumentando 0.25% por quilometro entre 8 e 16 quilômetros).</p>
 </section></section><section id="pergunta-5" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="pergunta-5">
 <span class="header-section-number">2.5</span> Pergunta 5</h2>
 <p><span style=" font-weight: bold;    color: blue !important;">Comparar os resultados apresentados nas figuras com modelos lineares e não-lineares. Como podemos estabelecer qual seria o melhor modelo? Qual modelo seria mais adequado para identificar limiares no padrão de área central de floresta?</span></p>
 <section id="resposta-4" class="level3" data-number="2.5.1"><h3 data-number="2.5.1" class="anchored" data-anchor-id="resposta-4">
 <span class="header-section-number">2.5.1</span> resposta</h3>
-<p>Uma inspeção visual sugere que um modelo linear sem qualquer transformação é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Os modelos melhorariam (por exemplo Os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer.</p>
-<section id="pergunta-6" class="level4" data-number="2.5.1.1"><h4 data-number="2.5.1.1" class="anchored" data-anchor-id="pergunta-6">
-<span class="header-section-number">2.5.1.1</span> Pergunta 6</h4>
-<p><span style=" font-weight: bold;    color: blue !important;">Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os graficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
-</section></section><section id="resposta-5" class="level3" data-number="2.5.2"><h3 data-number="2.5.2" class="anchored" data-anchor-id="resposta-5">
-<span class="header-section-number">2.5.2</span> resposta</h3>
-</section></section><section id="pergunta-7" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="pergunta-7">
-<span class="header-section-number">2.6</span> Pergunta 7</h2>
-<p><span style=" font-weight: bold;    color: blue !important;">Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no tutorial, selecione pelo menos oito métricas de nível classe para caracterizar a paisagem de estudo e objectivos da sua projeto. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
-<section id="resposta-6" class="level3" data-number="2.6.1"><h3 data-number="2.6.1" class="anchored" data-anchor-id="resposta-6">
+<p>Uma inspeção visual sugere que um modelo linear sem qualquer transformação tem os maiores intervalos de confiança e é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Todos os modelos melhorariam (por exemplo os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer.</p>
+</section></section><section id="pergunta-6" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="pergunta-6">
+<span class="header-section-number">2.6</span> Pergunta 6</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Aumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar dados novas (isso é seis distâncias novas e as seis distâncias originais) em um objeto com nome de "amostras_metrica_nova". ii) usando ggplot2 fazer um grafico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.</span></p>
+<section id="resposta-5" class="level3" data-number="2.6.1"><h3 data-number="2.6.1" class="anchored" data-anchor-id="resposta-5">
 <span class="header-section-number">2.6.1</span> resposta</h3>
+</section></section><section id="pergunta-7" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="pergunta-7">
+<span class="header-section-number">2.7</span> Pergunta 7</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os graficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
+<section id="resposta-6" class="level3" data-number="2.7.1"><h3 data-number="2.7.1" class="anchored" data-anchor-id="resposta-6">
+<span class="header-section-number">2.7.1</span> resposta</h3>
+</section></section><section id="pergunta-8" class="level2" data-number="2.8"><h2 data-number="2.8" class="anchored" data-anchor-id="pergunta-8">
+<span class="header-section-number">2.8</span> Pergunta 8</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no tutorial, selecione pelo menos oito métricas de nível classe para caracterizar a paisagem de estudo e objectivos da sua projeto em grupo. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
+<section id="resposta-7" class="level3" data-number="2.8.1"><h3 data-number="2.8.1" class="anchored" data-anchor-id="resposta-7">
+<span class="header-section-number">2.8.1</span> resposta</h3>
 
 
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

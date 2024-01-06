@@ -34,21 +34,34 @@ library(landscapemetrics)
 
 ### resposta
 
-Para responder a pergunta você deve revisar as aulas e o conteúdo no capitulo Métrica. Métricas (descrição - o nome, porque serve, unidades de medida, e relevância ecológica) para todos os níveis foram apresentadas nas aulas "Métricas da paisagem: Modelo mancha-corredor-matriz" e "Índicesde Paisagem e Análises de Padrões Espaciais".
+Para responder a pergunta você deve revisar as aulas e o conteúdo no capitulo Métrica. Métricas (descrição - o nome, porque serve, unidades de medida, e relevância ecológica) para todos os níveis foram apresentadas nas aulas "Métricas da paisagem: Modelo mancha-corredor-matriz" e "Índices de Paisagem e Análises de Padrões Espaciais". Exemplo com uma métrica tamanho (área):
 
 1.  Nível de mancha - tamanho da mancha.
 2.  Nível de classe - tamanho média das manchas.
 3.  Nível de paisagem - tamanho média das manchas.
 
-Podemos verificar as métricas disponíveis no pacote `landscapemetrics` com o seguinte código:
+Podemos verificar as métricas disponíveis no pacote [landscapemetrics](https://r-spatialecology.github.io/landscapemetrics/) com o seguinte código:
 
 ```{r}
 #| label: help-metrics
 #| warning: false
 #| message: false
 #| echo: true
+#| eval: false
+# ajudar para entender a função
+?list_lsm()
+# Nível de mancha
+landscapemetrics::list_lsm(level = "patch", type = "area and edge metric")
+?landscapemetrics::list_lsm
+# Nível de classe
+landscapemetrics::list_lsm(level = "class", type = "area and edge metric")
+?landscapemetrics::list_lsm
+# Nível de paisagem
+landscapemetrics::list_lsm(level = "landscape", type = "area and edge metric")
+?landscapemetrics::list_lsm
 
-
+# todos as métricas com area
+landscapemetrics::list_lsm(metric = "area")
 
 ```
 
@@ -58,7 +71,7 @@ Podemos verificar as métricas disponíveis no pacote `landscapemetrics` com o s
 
 ### resposta
 
-Para responder a pergunta você preciso entender a definação da "matriz" no contexto de Ecologia da Paisagem - modelo de mancha-corrredor-matriz (aula - Métricas da paisagem: Modelo mancha-corredor-matriz). Neste caso, class 0 é o classe dominante - com a área core cobrindo quase 67% da paisagem. Assim sendo, classe 0 e a matriz.
+Para responder a pergunta você preciso entender a definação da "matriz" no contexto de Ecologia da Paisagem - modelo de mancha-corrredor-matriz (aula - Métricas da paisagem: Modelo mancha-corredor-matriz). Neste caso, class 0 é o classe dominante - com a área core cobrindo quase 67% da paisagem. Assim sendo, classe 0 e a matriz. Não há necessidade de informações adicionais. Se os valores estivessem menores e mais próximos (por exemplo, 41 e 44%), provavelmente precisaríamos incluir métricas adicionais para representar padrões espaciais na paisagem, como coesão, tamanho do maior mancha etca. 
 
 ## Pergunta 3
 
@@ -74,7 +87,7 @@ Seguindo o exemplo do capítulo, sabemos que os buffers têm formato de círculo
 
 3.  E para finalizar converta o valor da área em quilômetros quadrados.
 
-No R, podemos fazer isso, ajustando o codigo no capítulo com a função `mutate()`. Usamos `mutate()` para fazer novas colunas com o valor da área em metros quadrados `area_m2` e quilômetros quadrados `area_km2`. Mantemos os nomes curtos, e depois atualize o rótulo do eixo para refletir a área, especificando o nome do eixo `x` com a função `labs()`.
+No R, podemos fazer isso, ajustando o codigo no capítulo com a função `mutate()`. Usamos `mutate()` para fazer novas colunas com o valor da área em metros quadrados `area_m2` e quilômetros quadrados `area_km2`. Mantemos os nomes curtos, e depois atualize o rótulo do eixo para refletir a nova coluna com valores de área, especificando o nome do eixo `x` com a função `labs()`.
 
 ```{r}
 #| label: data-pergunta3
@@ -92,7 +105,7 @@ amostras_metrica |>
   geom_point() + 
   geom_line() +
   labs(x = "Área (quilômetros quadrados)", 
-       y = "Área central de floresta (porcentagem da paisagem)") + 
+       y = "Área central de floresta\n(porcentagem da paisagem)") + 
   theme(text = element_text(size = 14))
 ```
 
@@ -100,9 +113,11 @@ amostras_metrica |>
 
 `r kableExtra::text_spec("Em menos de 200 palavras apresente a sua interpretação do gráfico em figura 5.2.", color = "blue", bold = TRUE)`
 
+
 ### resposta
 
-A proporção da floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A relação não é linear. 
+A proporção de floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A proporção de floresta aumenta de zero a 51 por cento, mas a relação não é linear. Os valores aumentam rapidamente até extensões de 8 km (6% por quilometro em média entre 0 e 8 quilômetros). Após isso a curva parece atingir uma assíntota (aumentando 0.25% por quilometro entre 8 e 16 quilômetros).
+
 
 ## Pergunta 5
 
@@ -110,17 +125,23 @@ A proporção da floresta muda com a escala espacial, representado pela extensã
 
 ### resposta
 
-Uma inspeção visual sugere que um modelo linear sem qualquer transformação é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Os modelos melhorariam (por exemplo os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer.
+Uma inspeção visual sugere que um modelo linear sem qualquer transformação tem os maiores intervalos de confiança e é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Todos os modelos melhorariam (por exemplo os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer.
+
+## Pergunta 6
+
+`r kableExtra::text_spec('Aumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar  dados novas (isso é seis distâncias novas e as seis distâncias originais) em um objeto com nome de "amostras_metrica_nova". ii) usando ggplot2 fazer um grafico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.', color = "blue", bold = TRUE)`
+
+### resposta
 
 
-#### Pergunta 6
+## Pergunta 7
 
 `r kableExtra::text_spec("Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os graficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.", color = "blue", bold = TRUE)`
 
 ### resposta
 
-## Pergunta 7
+## Pergunta 8
 
-`r kableExtra::text_spec("Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no tutorial, selecione pelo menos oito métricas de nível classe para caracterizar a paisagem de estudo e objectivos da sua projeto. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.", color = "blue", bold = TRUE)`
+`r kableExtra::text_spec("Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no tutorial, selecione pelo menos oito métricas de nível classe para caracterizar a paisagem de estudo e objectivos da sua projeto em grupo. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.", color = "blue", bold = TRUE)`
 
 ### resposta

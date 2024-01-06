@@ -44,7 +44,7 @@ format:
     documentclass: scrreprt
     highlight-style: tango
     toc: true
-    toc_depth: 3
+    toc_depth: 2
     number_sections: true
     extra_dependencies: flafter
     highlight: tango

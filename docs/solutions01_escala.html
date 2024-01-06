@@ -343,13 +343,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><p>Agora que temos tudo nas mesmas unidades podemos calcular a proporção de floresta. A proporção de floresta seria a área de floresta dividido por área total da buffer = 6,3 / 78,5 = 0.08. Ou seja, cerca de 8 % é floresta.</p></li>
 </ol>
 <p>E depois, repetindo o mesmo processo para os outros valores. Isso seria possivel tanto com um calculador, quanto com ferramentas de planilha como <a href="https://www.microsoft.com/pt-br/microsoft-365/excel">Excel</a> e <a href="https://pt.libreoffice.org/descobrir/calc/">Calc</a>.</p>
-<p>Podemos responder usando R assim:</p>
+<p>Podemos responder usando R em 2 passos assim:</p>
 <div class="cell">
-<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># construir uma data frame com os valores</span></span>
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="co"># 1 construir uma data frame "raios" com os valores</span></span>
 <span><span class="va">raio_m</span> <span class="op">&lt;-</span>  <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">250</span>, <span class="fl">500</span>, <span class="fl">1000</span>,<span class="fl">2000</span>, <span class="fl">4000</span><span class="op">)</span></span>
 <span><span class="va">floresta_ha</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">6.3</span>, <span class="fl">84.3</span>, <span class="fl">502.6</span>, <span class="fl">3351</span><span class="op">)</span> </span>
 <span><span class="va">raios</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/data.frame.html">data.frame</a></span><span class="op">(</span>raio_m <span class="op">=</span> <span class="va">raio_m</span>, </span>
 <span>                    floresta_ha <span class="op">=</span> <span class="va">floresta_ha</span><span class="op">)</span></span>
+<span><span class="co"># 2 Calculos e grafico.</span></span>
 <span><span class="co"># Unidades diferentes (raio em metros, área em hectares). </span></span>
 <span><span class="co"># Portanto vamos calcular área de cada buffer em hectares</span></span>
 <span><span class="co"># e fazer o grafico</span></span>

@@ -1,4 +1,3 @@
 # Bem-vindos {#sec-bemvindo .unnumbered}
 
-Este livro inclui soluções para perguntas do livro [Ecologia de Paisagens com R](https://darrennorris.github.io/epr/) : 
-<https://darrennorris.github.io/epr/>.
+Este livro inclui soluções para perguntas do livro [Ecologia de Paisagens com R](https://darrennorris.github.io/epr/) : <https://darrennorris.github.io/epr/>.
