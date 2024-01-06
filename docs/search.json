@@ -1,59 +1,10 @@
 [
   {
-    "objectID": "solutions02_metricas.html#pergunta-1",
-    "href": "solutions02_metricas.html#pergunta-1",
-    "title": "\n2  Capítulo Métricas\n",
-    "section": "\n2.1 Pergunta 1",
-    "text": "2.1 Pergunta 1\nDescreva brevemente 2 métricas de cada nível (patch, class, landscape) usando ajudar (usando ? e/ou list_lsm), aulas () e/ou a leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises). Incluindo na descrição - o nome, porque serve, unidades de medida, e relevância ecológica.\n\n2.1.1 resposta\nPara responder a pergunta você deve revisar as aulas e o conteúdo no capitulo Métrica. Métricas (descrição - o nome, porque serve, unidades de medida, e relevância ecológica) para todos os níveis foram apresentadas nas aulas “Métricas da paisagem: Modelo mancha-corredor-matriz” e “Índices de Paisagem e Análises de Padrões Espaciais”. Exemplo com uma métrica tamanho (área):\n\nNível de mancha - tamanho da mancha.\nNível de classe - tamanho média das manchas.\nNível de paisagem - tamanho média das manchas.\n\nPodemos verificar as métricas disponíveis no pacote landscapemetrics com o seguinte código:\n\n# ajudar para entender a função\n?list_lsm()\n# Nível de mancha\nlandscapemetrics::list_lsm(level = \"patch\", type = \"area and edge metric\")\n?landscapemetrics::list_lsm\n# Nível de classe\nlandscapemetrics::list_lsm(level = \"class\", type = \"area and edge metric\")\n?landscapemetrics::list_lsm\n# Nível de paisagem\nlandscapemetrics::list_lsm(level = \"landscape\", type = \"area and edge metric\")\n?landscapemetrics::list_lsm\n\n# todos as métricas com area\nlandscapemetrics::list_lsm(metric = \"area\")"
-  },
-  {
-    "objectID": "solutions02_metricas.html#pergunta-2",
-    "href": "solutions02_metricas.html#pergunta-2",
-    "title": "\n2  Capítulo Métricas\n",
-    "section": "\n2.2 Pergunta 2",
-    "text": "2.2 Pergunta 2\nO modelo mancha-corredor-matriz é frequentemente adotado na ecologia da paisagem. Com base nas aulas teóricas e usando os valores no objeto minha_amostra_1000 apresentados na tabela acima, identificar qual classe representar a matriz na paisagem. Há alguma informação faltando que limita a sua capacidade de identificar qual classe representar a matriz? Se sim, o que precisa ser adicionado? Justifique as suas respostas de forma clara e concisa.\n\n2.2.1 resposta\nPara responder a pergunta você preciso entender a definação da “matriz” no contexto de Ecologia da Paisagem - modelo de mancha-corrredor-matriz (aula - Métricas da paisagem: Modelo mancha-corredor-matriz). Neste caso, class 0 é o classe dominante - com a área core cobrindo quase 67% da paisagem. Assim sendo, classe 0 e a matriz. Não há necessidade de informações adicionais. Se os valores estivessem menores e mais próximos (por exemplo, 41 e 44%), provavelmente precisaríamos incluir métricas adicionais para representar padrões espaciais na paisagem, como coesão, tamanho do maior mancha etca."
-  },
-  {
-    "objectID": "solutions02_metricas.html#pergunta-3",
-    "href": "solutions02_metricas.html#pergunta-3",
-    "title": "\n2  Capítulo Métricas\n",
-    "section": "\n2.3 Pergunta 3",
-    "text": "2.3 Pergunta 3\nEm vez de extensão, você preciso incluir o tamanho (área do circulo) correspondente a cada raio. Incluir uma cópia do código ajustado para produzir uma figura com tamanho (área em quilômetros quadrados) no eixo x.\n\n2.3.1 resposta\nSeguindo o exemplo do capítulo, sabemos que os buffers têm formato de círculo, potanto:\n\nA extensão seria o diametro da buffer (raio x 2).\nSabemos que a área de um círculo é pi vezes o raio elevado ao quadrado. Portanto, estimar a área do buffer em metros quadrados: pi X (raio 2).\nE para finalizar converta o valor da área em quilômetros quadrados.\n\nNo R, podemos fazer isso, ajustando o codigo no capítulo com a função mutate(). Usamos mutate() para fazer novas colunas com o valor da área em metros quadrados area_m2 e quilômetros quadrados area_km2. Mantemos os nomes curtos, e depois atualize o rótulo do eixo para refletir a nova coluna com valores de área, especificando o nome do eixo x com a função labs().\n\namostras_metrica |&gt; \n  filter(class==1) |&gt; \n  mutate(ext_m = 2*raio, \n         area_m2 = 3.14*(raio^2)) |&gt; \n  mutate(area_km2 = area_m2/1000000) |&gt;\n  ggplot(aes(x = area_km2, y = value)) + \n  geom_point() + \n  geom_line() +\n  labs(x = \"Área (quilômetros quadrados)\", \n       y = \"Área central de floresta\\n(porcentagem da paisagem)\") + \n  theme(text = element_text(size = 14))"
-  },
-  {
-    "objectID": "solutions02_metricas.html#pergunta-4",
-    "href": "solutions02_metricas.html#pergunta-4",
-    "title": "\n2  Capítulo Métricas\n",
-    "section": "\n2.4 Pergunta 4",
-    "text": "2.4 Pergunta 4\nEm menos de 200 palavras apresente a sua interpretação do gráfico em figura 5.2.\n\n2.4.1 resposta\nA proporção de floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A proporção de floresta aumenta de zero a 51 por cento, mas a relação não é linear. Os valores aumentam rapidamente até extensões de 8 km (6% por quilometro em média entre 0 e 8 quilômetros). Após isso a curva parece atingir uma assíntota (aumentando 0.25% por quilometro entre 8 e 16 quilômetros)."
-  },
-  {
-    "objectID": "solutions02_metricas.html#pergunta-5",
-    "href": "solutions02_metricas.html#pergunta-5",
-    "title": "\n2  Capítulo Métricas\n",
-    "section": "\n2.5 Pergunta 5",
-    "text": "2.5 Pergunta 5\nComparar os resultados apresentados nas figuras com modelos lineares e não-lineares. Como podemos estabelecer qual seria o melhor modelo? Qual modelo seria mais adequado para identificar limiares no padrão de área central de floresta?\n\n2.5.1 resposta\nUma inspeção visual sugere que um modelo linear sem qualquer transformação tem os maiores intervalos de confiança e é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Todos os modelos melhorariam (por exemplo os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer."
-  },
-  {
-    "objectID": "solutions02_metricas.html#pergunta-6",
-    "href": "solutions02_metricas.html#pergunta-6",
-    "title": "\n2  Capítulo Métricas\n",
-    "section": "\n2.6 Pergunta 6",
-    "text": "2.6 Pergunta 6\nAumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar dados novas (isso é seis distâncias novas e as seis distâncias originais) em um objeto com nome de \"amostras_metrica_nova\". ii) usando ggplot2 fazer um grafico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.\n\n2.6.1 resposta"
-  },
-  {
-    "objectID": "solutions02_metricas.html#pergunta-7",
-    "href": "solutions02_metricas.html#pergunta-7",
-    "title": "\n2  Capítulo Métricas\n",
-    "section": "\n2.7 Pergunta 7",
-    "text": "2.7 Pergunta 7\nCom base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os graficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.\n\n2.7.1 resposta"
-  },
-  {
-    "objectID": "solutions02_metricas.html#pergunta-8",
-    "href": "solutions02_metricas.html#pergunta-8",
-    "title": "\n2  Capítulo Métricas\n",
-    "section": "\n2.8 Pergunta 8",
-    "text": "2.8 Pergunta 8\nUsando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no tutorial, selecione pelo menos oito métricas de nível classe para caracterizar a paisagem de estudo e objectivos da sua projeto em grupo. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.\n\n2.8.1 resposta"
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Ecologia de Paisagems com R: soluções",
+    "section": "",
+    "text": "Bem-vindos\nEste livro inclui soluções para perguntas do livro Ecologia de Paisagens com R : https://darrennorris.github.io/epr/."
   },
   {
     "objectID": "intro.html#organização-do-codigo-no-livro",
@@ -112,10 +63,59 @@
     "text": "1.6 Pergunta 6\nA modelagem multiescala quantifica as condições do ambiente em múltiplas escalas alterando o resolução ou a extensão da análise e, em seguida, avaliando qual das escalas consideradas explica melhor um padrão ou processo. Escolha 1 espécie aquático e 1 espécie terrestre que ocorram na região a montante das hidrelétricas no Rio Araguari. Com base nas diferenças entre extensões (indicados no exemplo anterior) e as características funcionais das espécies (por exemplo área de vida), escolher as extensões mais adequadas para um estudo multiescala de cada espécie.\n\n1.6.1 resposta"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Ecologia de Paisagems com R: soluções",
-    "section": "",
-    "text": "Bem-vindos\nEste livro inclui soluções para perguntas do livro Ecologia de Paisagens com R : https://darrennorris.github.io/epr/."
+    "objectID": "solutions02_metricas.html#pergunta-1",
+    "href": "solutions02_metricas.html#pergunta-1",
+    "title": "\n2  Capítulo Métricas\n",
+    "section": "\n2.1 Pergunta 1",
+    "text": "2.1 Pergunta 1\nDescreva brevemente 2 métricas de cada nível (patch, class, landscape) usando ajudar (usando ? e/ou list_lsm), aulas (\"Métricas da paisagem: Modelo mancha-corredor-matriz\" e \"Índices de Paisagem e Análises de Padrões Espaciais\" ) e/ou a leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises). Incluindo na descrição - o nome, porque serve, unidades de medida, e relevância ecológica.\n\n2.1.1 resposta\nPara responder a pergunta você deve revisar as aulas e o conteúdo no capitulo Métrica. Métricas (descrição - o nome, porque serve, unidades de medida, e relevância ecológica) para todos os níveis foram apresentadas nas aulas “Métricas da paisagem: Modelo mancha-corredor-matriz” e “Índices de Paisagem e Análises de Padrões Espaciais”. Exemplo com uma métrica tamanho (área):\n\nNível de mancha - tamanho da mancha.\nNível de classe - tamanho média das manchas.\nNível de paisagem - tamanho média das manchas.\n\nPodemos verificar as métricas disponíveis no pacote landscapemetrics com o seguinte código:\n\n# ajudar para entender a função\n?list_lsm()\n# Nível de mancha\nlandscapemetrics::list_lsm(level = \"patch\", type = \"area and edge metric\")\n?landscapemetrics::list_lsm\n# Nível de classe\nlandscapemetrics::list_lsm(level = \"class\", type = \"area and edge metric\")\n?landscapemetrics::list_lsm\n# Nível de paisagem\nlandscapemetrics::list_lsm(level = \"landscape\", type = \"area and edge metric\")\n?landscapemetrics::list_lsm\n\n# todos as métricas com area\nlandscapemetrics::list_lsm(metric = \"area\")"
+  },
+  {
+    "objectID": "solutions02_metricas.html#pergunta-2",
+    "href": "solutions02_metricas.html#pergunta-2",
+    "title": "\n2  Capítulo Métricas\n",
+    "section": "\n2.2 Pergunta 2",
+    "text": "2.2 Pergunta 2\nO modelo mancha-corredor-matriz é frequentemente adotado na ecologia da paisagem. Com base nas aulas teóricas e usando os valores no objeto minha_amostra_1000 apresentados na tabela acima, identificar qual classe representar a matriz na paisagem. Há alguma informação faltando que limita a sua capacidade de identificar qual classe representar a matriz? Se sim, o que precisa ser adicionado? Justifique as suas respostas de forma clara e concisa.\n\n2.2.1 resposta\nPara responder a pergunta você preciso entender a definação da “matriz” no contexto de Ecologia da Paisagem - modelo de mancha-corrredor-matriz (aula - Métricas da paisagem: Modelo mancha-corredor-matriz). Neste caso, class 0 é o classe dominante - com a área core cobrindo quase 67% da paisagem. Assim sendo, classe 0 e a matriz. Não há necessidade de informações adicionais. Se os valores estivessem menores e mais próximos (por exemplo, 41 e 44%), provavelmente precisaríamos incluir métricas adicionais para representar padrões espaciais na paisagem, como coesão, tamanho do maior mancha etca."
+  },
+  {
+    "objectID": "solutions02_metricas.html#pergunta-3",
+    "href": "solutions02_metricas.html#pergunta-3",
+    "title": "\n2  Capítulo Métricas\n",
+    "section": "\n2.3 Pergunta 3",
+    "text": "2.3 Pergunta 3\nEm vez de extensão, você preciso incluir o tamanho (área do circulo) correspondente a cada raio. Incluir uma cópia do código ajustado para produzir uma figura com tamanho (área em quilômetros quadrados) no eixo x.\n\n2.3.1 resposta\nSeguindo o exemplo do capítulo, sabemos que os buffers têm formato de círculo, potanto:\n\nA extensão seria o diametro da buffer (raio x 2).\nSabemos que a área de um círculo é pi vezes o raio elevado ao quadrado. Portanto, estimar a área do buffer em metros quadrados: pi X (raio 2).\nE para finalizar converta o valor da área em quilômetros quadrados.\n\nNo R, podemos fazer isso, ajustando o codigo no capítulo com a função mutate(). Usamos mutate() para fazer novas colunas com o valor da área em metros quadrados area_m2 e quilômetros quadrados area_km2. Mantemos os nomes curtos, e depois atualize o rótulo do eixo para refletir a nova coluna com valores de área, especificando o nome do eixo x com a função labs().\n\namostras_metrica |&gt; \n  filter(class==1) |&gt; \n  mutate(ext_m = 2*raio, \n         area_m2 = 3.14*(raio^2)) |&gt; \n  mutate(area_km2 = area_m2/1000000) |&gt;\n  ggplot(aes(x = area_km2, y = value)) + \n  geom_point() + \n  geom_line() +\n  labs(x = \"Área (quilômetros quadrados)\", \n       y = \"Área central de floresta\\n(porcentagem da paisagem)\") + \n  theme(text = element_text(size = 14))"
+  },
+  {
+    "objectID": "solutions02_metricas.html#pergunta-4",
+    "href": "solutions02_metricas.html#pergunta-4",
+    "title": "\n2  Capítulo Métricas\n",
+    "section": "\n2.4 Pergunta 4",
+    "text": "2.4 Pergunta 4\nEm menos de 200 palavras apresente a sua interpretação do gráfico em figura 5.2.\n\n2.4.1 resposta\nA proporção de floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A proporção de floresta aumenta de zero a 51 por cento, mas a relação não é linear. Os valores aumentam rapidamente até extensões de 8 km (6% por quilometro em média entre 0 e 8 quilômetros). Após isso a curva parece atingir uma assíntota (aumentando 0.25% por quilometro entre 8 e 16 quilômetros)."
+  },
+  {
+    "objectID": "solutions02_metricas.html#pergunta-5",
+    "href": "solutions02_metricas.html#pergunta-5",
+    "title": "\n2  Capítulo Métricas\n",
+    "section": "\n2.5 Pergunta 5",
+    "text": "2.5 Pergunta 5\nComparar os resultados apresentados nas figuras com modelos lineares e não-lineares. Como podemos estabelecer qual seria o melhor modelo? Qual modelo seria mais adequado para identificar limiares no padrão de área central de floresta?\n\n2.5.1 resposta\nUma inspeção visual sugere que um modelo linear sem qualquer transformação tem os maiores intervalos de confiança e é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Todos os modelos melhorariam (por exemplo os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer."
+  },
+  {
+    "objectID": "solutions02_metricas.html#pergunta-6",
+    "href": "solutions02_metricas.html#pergunta-6",
+    "title": "\n2  Capítulo Métricas\n",
+    "section": "\n2.6 Pergunta 6",
+    "text": "2.6 Pergunta 6\nAumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar dados novas (isso é seis distâncias novas e as seis distâncias originais) em um objeto com nome de \"amostras_metrica_nova\". ii) usando ggplot2 fazer um grafico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.\n\n2.6.1 resposta"
+  },
+  {
+    "objectID": "solutions02_metricas.html#pergunta-7",
+    "href": "solutions02_metricas.html#pergunta-7",
+    "title": "\n2  Capítulo Métricas\n",
+    "section": "\n2.7 Pergunta 7",
+    "text": "2.7 Pergunta 7\nCom base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os graficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.\n\n2.7.1 resposta"
+  },
+  {
+    "objectID": "solutions02_metricas.html#pergunta-8",
+    "href": "solutions02_metricas.html#pergunta-8",
+    "title": "\n2  Capítulo Métricas\n",
+    "section": "\n2.8 Pergunta 8",
+    "text": "2.8 Pergunta 8\nUsando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no tutorial, selecione pelo menos oito métricas de nível classe para caracterizar a paisagem de estudo e objectivos da sua projeto em grupo. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.\n\n2.8.1 resposta"
   }
 ]

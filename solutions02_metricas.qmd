@@ -30,7 +30,7 @@ library(landscapemetrics)
 
 ## Pergunta 1
 
-`r kableExtra::text_spec("Descreva brevemente 2 métricas de cada nível (patch, class, landscape) usando ajudar (usando ? e/ou list_lsm), aulas () e/ou a leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises). Incluindo na descrição - o nome, porque serve, unidades de medida, e relevância ecológica.", color = "blue", bold = TRUE)`
+`r kableExtra::text_spec('Descreva brevemente 2 métricas de cada nível (patch, class, landscape) usando ajudar (usando ? e/ou list_lsm), aulas ("Métricas da paisagem: Modelo mancha-corredor-matriz" e "Índices de Paisagem e Análises de Padrões Espaciais" ) e/ou a leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises). Incluindo na descrição - o nome, porque serve, unidades de medida, e relevância ecológica.', color = "blue", bold = TRUE)`
 
 ### resposta
 
