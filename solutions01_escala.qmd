@@ -214,7 +214,9 @@ raios |>
 
 ### resposta
 
-Como entender como a escala pode afetar a análise em diferentes ambientes. Existem diferenças importantes nos fatores a serem considerados entre os dois ambientes. Por exemplo, os rios são lineares, com direção (anisotropia), enquanto os terrestres são menos específicos. Como os padrões e escalas relevantes podem variar dependendo de fatores além das características funcionais das espécies como o tamanho do rio onde as espécies ocorrem.
+Para responder a pergunta você deve revisar as aulas ("ECOLOGIA DA PAISAGEM" e "Organização de paisagens") e o conteúdo no capitulo Escala. 
+
+Como entender como a escala pode afetar a análise em diferentes ambientes? Existem diferenças importantes nos fatores a serem considerados entre os dois ambientes. Por exemplo, os rios são lineares, com direção (anisotropia), enquanto os terrestres são menos específicos. Como os padrões e escalas relevantes podem variar dependendo de fatores além das características funcionais das espécies como o tamanho do rio onde as espécies ocorrem. Em outras palavras, dependendo da espécie escolhida, é provável que haja fatores adicionais que precisam ser considerados.
 
 Compreender os efeitos de escala é crucial para análises precisas e relevantes na ecologia da paisagem. As complexidades específicas associadas às florestas e aos rios realçam a necessidade de uma abordagem específica ao contexto para a selecção e análise da escala. Ao reconhecer e contabilizar as dependências de escala, os ecologistas paisagísticos podem obter conhecimentos mais profundos sobre as relações complexas entre padrões e processos ecológicos em diferentes extensões espaciais.
 
