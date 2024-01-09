@@ -213,3 +213,27 @@ raios |>
 `r kableExtra::text_spec("A modelagem multiescala quantifica as condições do ambiente em múltiplas escalas alterando o resolução ou a extensão da análise e, em seguida, avaliando qual das escalas consideradas  explica melhor um padrão ou processo. Escolha 1 espécie aquático e 1 espécie terrestre que ocorram na região a montante das hidrelétricas no Rio Araguari. Com base nas diferenças entre extensões (indicados no exemplo anterior) e as características funcionais das espécies (por exemplo área de vida), escolher as extensões mais adequadas para um estudo multiescala de cada espécie.", color = "blue", bold = TRUE)`
 
 ### resposta
+
+Como entender como a escala pode afetar a análise em diferentes ambientes. Existem diferenças importantes nos fatores a serem considerados entre os dois ambientes. Por exemplo, os rios são lineares, com direção (anisotropia), enquanto os terrestres são menos específicos. Como os padrões e escalas relevantes podem variar dependendo de fatores além das características funcionais das espécies como o tamanho do rio onde as espécies ocorrem.
+
+Compreender os efeitos de escala é crucial para análises precisas e relevantes na ecologia da paisagem. As complexidades específicas associadas às florestas e aos rios realçam a necessidade de uma abordagem específica ao contexto para a selecção e análise da escala. Ao reconhecer e contabilizar as dependências de escala, os ecologistas paisagísticos podem obter conhecimentos mais profundos sobre as relações complexas entre padrões e processos ecológicos em diferentes extensões espaciais.
+
+#### Florestas:
+
+ * Dependência de escala de métricas:    
+ Métricas de padrão de floresta, como tamanho de patch, formato e densidade de borda, mostram relacionamentos dependentes de escala. Por exemplo, a densidade da borda normalmente aumenta com a diminuição do tamanho do grão devido aos efeitos de fragmentação. Compreender essas relações de escala é crucial para interpretar a composição e configuração da paisagem.
+ 
+ * Processos ecológicos específicos à escala:    
+ Diferentes processos ecológicos operam em diferentes escalas nas florestas. A dispersão de sementes pode ser limitada pelo tamanho local da mancha (escala fina), enquanto os regimes de fogo podem depender de padrões climáticos regionais (escala ampla). Além das características funcionais das espécies, a escolha da escala apropriada depende do processo sob investigação.
+ 
+
+#### Rios:
+
+ * Natureza linear e gradientes longitudinais:    
+ Ao contrário das florestas, os rios são sistemas lineares com fortes gradientes longitudinais (por exemplo, mudanças na velocidade do fluxo, concentrações de nutrientes). A escolha da escala deve levar em conta esses gradientes para evitar interpretações errôneas. Extensões menores podem perder impactos importantes a jusante, enquanto extensões maiores podem mascarar variações localizadas.
+ 
+ * Escala e conectividade:    
+ A conectividade fluvial para organismos aquáticos como peixes é altamente dependente da escala. A análise das barreiras à circulação pode exigir a concentração nos obstáculos locais (escala precisa), enquanto a avaliação da dinâmica populacional pode exigir a consideração dos alcances a montante e a jusante (escala ampla).
+ 
+ * Escala e qualidade da água:    
+ Os parâmetros de qualidade da água, como temperatura e oxigênio dissolvido, podem variar dramaticamente ao longo dos rios. A escolha da escala apropriada para amostragem e análise garante uma representação precisa desses padrões dinâmicos.
