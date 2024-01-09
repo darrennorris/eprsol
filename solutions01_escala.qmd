@@ -177,7 +177,7 @@ Com base nas informações que já conhecemos, existem diferentes opções para 
 
 2.  Sabemos que a área de um círculo é pi vezes o raio elevado ao quadrado. Portanto, estimar a área do buffer em metros quadrados: pi X (raio ^2^) = 3.14 X 250000 = 785000.
 
-3.  Unidades diferentes (raio = metros, área em hectares), portanto calcular área do buffer em hectares. 785000 / 10000 = 78,5 hectares.
+3.  Unidades diferentes (raio em metros, área em hectares), portanto calcular área do buffer em hectares. 785000 / 10000 = 78,5 hectares.
 
 4.  Agora que temos tudo nas mesmas unidades podemos calcular a proporção de floresta. A proporção de floresta seria a área de floresta dividido por área total da buffer = 6,3 / 78,5 = 0.08. Ou seja, cerca de 8 % é floresta.
 
