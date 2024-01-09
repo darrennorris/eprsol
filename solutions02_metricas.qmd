@@ -127,17 +127,17 @@ Uma inspeção visual sugere que um modelo linear sem qualquer transformação t
 
 ## Pergunta 6
 
-`r kableExtra::text_spec('Aumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar  dados novas (isso é cinco distâncias novas e as sete distâncias originais) em um objeto com nome de "amostras_metrica_nova". ii) usando ggplot2 fazer um grafico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.', color = "blue", bold = TRUE)`
+`r kableExtra::text_spec('Aumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar  dados novas (isso é cinco distâncias novas e as sete distâncias originais) em um objeto com nome de "amostras_metrica_nova". ii) usando ggplot2 fazer um gráfico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.', color = "blue", bold = TRUE)`
 
 ### resposta
 
 Passos para desenvolver uma resposta:
 
-1.  Decida as distâncias para os seis novos buffers.
+1.  Decida as distâncias para os cinco novos buffers.
 
 2.  Calcular a métrica nos novos buffers.
 
-3.  Adicione os novos dados junto com as seis distâncias originais.
+3.  Adicione os novos dados junto com as setes distâncias originais.
 
 4.  Faça o gráfico.
 
@@ -252,14 +252,14 @@ bind_rows(minha_amostra_250,
 
 ```
 
-Grafico.
+Gráfico.
 ```{r}
 
 amostras_metrica_nova |> 
   filter(class==1) |> 
   mutate(ext_m = 2*raio, 
          ext_km = (2*raio)/1000) |>
-# fazer o grafico
+# fazer o gráfico
   ggplot(aes(x = ext_km, y = value)) + 
   geom_point(size = 4) + 
   geom_line() +
@@ -274,7 +274,7 @@ amostras_metrica_nova |>
 
 ## Pergunta 7
 
-`r kableExtra::text_spec("Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os graficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.", color = "blue", bold = TRUE)`
+`r kableExtra::text_spec("Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os gráficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.", color = "blue", bold = TRUE)`
 
 ### resposta
 

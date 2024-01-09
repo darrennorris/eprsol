@@ -333,14 +333,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Uma inspeção visual sugere que um modelo linear sem qualquer transformação tem os maiores intervalos de confiança e é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Todos os modelos melhorariam (por exemplo os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer.</p>
 </section></section><section id="pergunta-6" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="pergunta-6">
 <span class="header-section-number">2.6</span> Pergunta 6</h2>
-<p><span style=" font-weight: bold;    color: blue !important;">Aumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar dados novas (isso é cinco distâncias novas e as sete distâncias originais) em um objeto com nome de "amostras_metrica_nova". ii) usando ggplot2 fazer um grafico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.</span></p>
+<p><span style=" font-weight: bold;    color: blue !important;">Aumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar dados novas (isso é cinco distâncias novas e as sete distâncias originais) em um objeto com nome de "amostras_metrica_nova". ii) usando ggplot2 fazer um gráfico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.</span></p>
 <section id="resposta-5" class="level3" data-number="2.6.1"><h3 data-number="2.6.1" class="anchored" data-anchor-id="resposta-5">
 <span class="header-section-number">2.6.1</span> resposta</h3>
 <p>Passos para desenvolver uma resposta:</p>
 <ol type="1">
-<li><p>Decida as distâncias para os seis novos buffers.</p></li>
+<li><p>Decida as distâncias para os cinco novos buffers.</p></li>
 <li><p>Calcular a métrica nos novos buffers.</p></li>
-<li><p>Adicione os novos dados junto com as seis distâncias originais.</p></li>
+<li><p>Adicione os novos dados junto com as setes distâncias originais.</p></li>
 <li><p>Faça o gráfico.</p></li>
 </ol>
 <p>Olhando o gráfico “Comparação de padrões lineares e não-lineares.” vemos que quando os pontos estão mais próximos os intervalos de confiança são menores. Os intervalos de confiança são maiores onde há maiores distâncias entre os pontos. Portanto, incluiremos mais buffers entre 1 e 16 quilômetros.</p>
@@ -426,13 +426,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span>          <span class="va">minha_amostra_14000</span>,</span>
 <span>          <span class="va">minha_amostra_16000</span><span class="op">)</span> <span class="op">-&gt;</span> <span class="va">amostras_metrica_nova</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Grafico.</p>
+<p>Gráfico.</p>
 <div class="cell">
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">amostras_metrica_nova</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="va">class</span><span class="op">==</span><span class="fl">1</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>ext_m <span class="op">=</span> <span class="fl">2</span><span class="op">*</span><span class="va">raio</span>, </span>
 <span>         ext_km <span class="op">=</span> <span class="op">(</span><span class="fl">2</span><span class="op">*</span><span class="va">raio</span><span class="op">)</span><span class="op">/</span><span class="fl">1000</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span><span class="co"># fazer o grafico</span></span>
+<span><span class="co"># fazer o gráfico</span></span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/ggplot.html">ggplot</a></span><span class="op">(</span><span class="fu"><a href="https://ggplot2.tidyverse.org/reference/aes.html">aes</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">ext_km</span>, y <span class="op">=</span> <span class="va">value</span><span class="op">)</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_point.html">geom_point</a></span><span class="op">(</span>size <span class="op">=</span> <span class="fl">4</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_path.html">geom_line</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span></span>
@@ -451,7 +451,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section></section><section id="pergunta-7" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="pergunta-7">
 <span class="header-section-number">2.7</span> Pergunta 7</h2>
-<p><span style=" font-weight: bold;    color: blue !important;">Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os graficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
+<p><span style=" font-weight: bold;    color: blue !important;">Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os gráficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
 <section id="resposta-6" class="level3" data-number="2.7.1"><h3 data-number="2.7.1" class="anchored" data-anchor-id="resposta-6">
 <span class="header-section-number">2.7.1</span> resposta</h3>
 </section></section><section id="pergunta-8" class="level2" data-number="2.8"><h2 data-number="2.8" class="anchored" data-anchor-id="pergunta-8">
