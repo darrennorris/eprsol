@@ -88,7 +88,7 @@
     "href": "solutions02_metricas.html#pergunta-4",
     "title": "\n2  Capítulo Métricas\n",
     "section": "\n2.4 Pergunta 4",
-    "text": "2.4 Pergunta 4\nEm menos de 200 palavras apresente a sua interpretação do gráfico em figura 5.2.\n\n2.4.1 resposta\nA proporção de floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A proporção de floresta aumenta de zero a 51 por cento, mas a relação não é linear. Os valores aumentam rapidamente até extensões de 8 km (6% por quilometro em média entre 0 e 8 quilômetros). Após isso a curva parece atingir uma assíntota (aumentando 0.25% por quilometro entre 8 e 16 quilômetros)."
+    "text": "2.4 Pergunta 4\nEm menos de 200 palavras apresente a sua interpretação do gráfico em figura 2.4.\n\n2.4.1 resposta\nA proporção de floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A proporção de floresta aumenta de zero a 51 por cento, mas a relação não é linear. Os valores aumentam rapidamente até extensões de 8 km (6% por quilometro em média entre 0 e 8 quilômetros). Após isso a curva parece atingir uma assíntota (aumentando 0.25% por quilometro entre 8 e 16 quilômetros)."
   },
   {
     "objectID": "solutions02_metricas.html#pergunta-5",

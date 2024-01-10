@@ -111,7 +111,7 @@ amostras_metrica |>
 
 ## Pergunta 4
 
-`r kableExtra::text_spec("Em menos de 200 palavras apresente a sua interpretação do gráfico em figura 5.2.", color = "blue", bold = TRUE)`
+`r kableExtra::text_spec("Em menos de 200 palavras apresente a sua interpretação do gráfico em figura 2.4.", color = "blue", bold = TRUE)`
 
 ### resposta
 
@@ -144,6 +144,7 @@ Passos para desenvolver uma resposta:
 Olhando o gráfico "Comparação de padrões lineares e não-lineares." vemos que quando os pontos estão mais próximos os intervalos de confiança são menores. Os intervalos de confiança são maiores onde há maiores distâncias entre os pontos. Portanto, incluiremos mais buffers entre 1 e 16 quilômetros.
 
 O código abaixo fará isso em R:
+
 ```{r}
 #| label: load-floresta
 #| warning: false
@@ -156,6 +157,7 @@ crs(floresta_2020) <- crs(rio_pontos_31976)
 ```
 
 Lembrando o codigo para as buffers originais:
+
 ```{r}
 #| label: buffers-originais
 #| warning: false
@@ -253,6 +255,7 @@ bind_rows(minha_amostra_250,
 ```
 
 Gráfico.
+
 ```{r}
 
 amostras_metrica_nova |> 
@@ -270,7 +273,6 @@ amostras_metrica_nova |>
   theme_bw() +
   theme(text = element_text(size = 18)) 
 ```
-
 
 ## Pergunta 7
 
