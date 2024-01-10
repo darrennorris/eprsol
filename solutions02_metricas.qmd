@@ -49,19 +49,25 @@ Podemos verificar as métricas disponíveis no pacote [landscapemetrics](https:/
 #| echo: true
 #| eval: false
 # ajudar para entender a função
-?list_lsm()
+?landscapemetrics::list_lsm
+
 # Nível de mancha
-landscapemetrics::list_lsm(level = "patch", type = "area and edge metric")
-?landscapemetrics::list_lsm
+landscapemetrics::list_lsm(level = "patch", 
+                           type = "area and edge metric")
+
 # Nível de classe
-landscapemetrics::list_lsm(level = "class", type = "area and edge metric")
-?landscapemetrics::list_lsm
+landscapemetrics::list_lsm(level = "class", 
+                           type = "area and edge metric")
+
 # Nível de paisagem
-landscapemetrics::list_lsm(level = "landscape", type = "area and edge metric")
-?landscapemetrics::list_lsm
+landscapemetrics::list_lsm(level = "landscape", 
+                           type = "area and edge metric")
 
 # todos as métricas com area
 landscapemetrics::list_lsm(metric = "area")
+
+# detalhes sobre a métrica (unidade etca)
+?landscapemetrics::lsm_p_area
 
 ```
 
