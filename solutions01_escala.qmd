@@ -183,24 +183,37 @@ Com base nas informações que já conhecemos, existem diferentes opções para 
 
 E depois, repetindo o mesmo processo para os outros valores. Isso seria possivel tanto com um calculador, quanto com ferramentas de planilha como [Excel](https://www.microsoft.com/pt-br/microsoft-365/excel) e [Calc](https://pt.libreoffice.org/descobrir/calc/).
 
-Podemos responder usando R em 2 passos assim:
-
+Podemos responder usando R em 3 passos assim:
+Passo 1 entrada de dados:
 ```{r}
 # 1 construir uma data frame "raios" com os valores
 raio_m <-  c(250, 500, 1000,2000, 4000)
 floresta_ha <- c(0, 6.3, 84.3, 502.6, 3351) 
 raios <- data.frame(raio_m = raio_m, 
                     floresta_ha = floresta_ha)
-# 2 Calculos e grafico.
+raios
+
+```
+
+Passo 2 calculos para o gráfico:
+```{r}
+# 2 Calculos para o gráfico.
 # Unidades diferentes (raio em metros, área em hectares). 
 # Portanto vamos calcular área de cada buffer em hectares
-# e fazer o grafico
-raios |> 
+# E depois a proporção de floresta "prop_floresta"
+raios <- raios |> 
   mutate(ext_m = raio_m*2, 
-         area_buff_m2 = (3.14 * raio_m^2)) |>
+         area_buff_m2 = (3.14 * raio_m^2)) |> 
   mutate(area_buff_ha = area_buff_m2/10000) |> 
-  mutate(prop_floresta = floresta_ha/area_buff_ha) |> 
-  ggplot(aes(x = ext_m, y = prop_floresta)) + 
+  mutate(prop_floresta = floresta_ha/area_buff_ha) 
+raios
+```
+
+Passo 3 fazer o grafico:
+```{r}
+
+# fazer o grafico
+  ggplot(raios, aes(x = ext_m, y = prop_floresta)) + 
   geom_point() + 
   geom_line() +
   labs(x = "extensão - diâmetro do buffer (metros)", 
@@ -208,13 +221,14 @@ raios |>
 
 ```
 
+
 ## Pergunta 6
 
 `r kableExtra::text_spec("A modelagem multiescala quantifica as condições do ambiente em múltiplas escalas alterando o resolução ou a extensão da análise e, em seguida, avaliando qual das escalas consideradas  explica melhor um padrão ou processo. Escolha 1 espécie aquático e 1 espécie terrestre que ocorram na região a montante das hidrelétricas no Rio Araguari. Com base nas diferenças entre extensões (indicados no exemplo anterior) e as características funcionais das espécies (por exemplo área de vida), escolher as extensões mais adequadas para um estudo multiescala de cada espécie.", color = "blue", bold = TRUE)`
 
 ### resposta
 
-Para responder a pergunta você deve revisar as aulas ("ECOLOGIA DA PAISAGEM" e "Organização de paisagens") e o conteúdo no capitulo Escala. 
+Para responder a pergunta você deve revisar as aulas ("ECOLOGIA DA PAISAGEM" e "Organização de paisagens") e o conteúdo no capitulo Escala.
 
 Como entender como a escala pode afetar a análise em diferentes ambientes? Existem diferenças importantes nos fatores a serem considerados entre os dois ambientes. Por exemplo, os rios são lineares, com direção (anisotropia), enquanto os terrestres são menos específicos. Como os padrões e escalas relevantes podem variar dependendo de fatores além das características funcionais das espécies como o tamanho do rio onde as espécies ocorrem. Em outras palavras, dependendo da espécie escolhida, é provável que haja fatores adicionais que precisam ser considerados.
 
@@ -222,20 +236,19 @@ Compreender os efeitos de escala é crucial para análises precisas e relevantes
 
 #### Florestas:
 
- * Dependência de escala de métricas:    
- Métricas de padrão de floresta, como tamanho de patch, formato e densidade de borda, mostram relacionamentos dependentes de escala. Por exemplo, a densidade da borda normalmente aumenta com a diminuição do tamanho do grão devido aos efeitos de fragmentação. Compreender essas relações de escala é crucial para interpretar a composição e configuração da paisagem.
- 
- * Processos ecológicos específicos à escala:    
- Diferentes processos ecológicos operam em diferentes escalas nas florestas. A dispersão de sementes pode ser limitada pelo tamanho local da mancha (escala fina), enquanto os regimes de fogo podem depender de padrões climáticos regionais (escala ampla). Além das características funcionais das espécies, a escolha da escala apropriada depende do processo sob investigação.
- 
+-   Dependência de escala de métricas:\
+    Métricas de padrão de floresta, como tamanho de patch, formato e densidade de borda, mostram relacionamentos dependentes de escala. Por exemplo, a densidade da borda normalmente aumenta com a diminuição do tamanho do grão devido aos efeitos de fragmentação. Compreender essas relações de escala é crucial para interpretar a composição e configuração da paisagem.
+
+-   Processos ecológicos específicos à escala:\
+    Diferentes processos ecológicos operam em diferentes escalas nas florestas. A dispersão de sementes pode ser limitada pelo tamanho local da mancha (escala fina), enquanto os regimes de fogo podem depender de padrões climáticos regionais (escala ampla). Além das características funcionais das espécies, a escolha da escala apropriada depende do processo sob investigação.
 
 #### Rios:
 
- * Natureza linear e gradientes longitudinais:    
- Ao contrário das florestas, os rios são sistemas lineares com fortes gradientes longitudinais (por exemplo, mudanças na velocidade do fluxo, concentrações de nutrientes). A escolha da escala deve levar em conta esses gradientes para evitar interpretações errôneas. Extensões menores podem perder impactos importantes a jusante, enquanto extensões maiores podem mascarar variações localizadas.
- 
- * Escala e conectividade:    
- A conectividade fluvial para organismos aquáticos como peixes é altamente dependente da escala. A análise das barreiras à circulação pode exigir a concentração nos obstáculos locais (escala precisa), enquanto a avaliação da dinâmica populacional pode exigir a consideração dos alcances a montante e a jusante (escala ampla).
- 
- * Escala e qualidade da água:    
- Os parâmetros de qualidade da água, como temperatura e oxigênio dissolvido, podem variar dramaticamente ao longo dos rios. A escolha da escala apropriada para amostragem e análise garante uma representação precisa desses padrões dinâmicos.
+-   Natureza linear e gradientes longitudinais:\
+    Ao contrário das florestas, os rios são sistemas lineares com fortes gradientes longitudinais (por exemplo, mudanças na velocidade do fluxo, concentrações de nutrientes). A escolha da escala deve levar em conta esses gradientes para evitar interpretações errôneas. Extensões menores podem perder impactos importantes a jusante, enquanto extensões maiores podem mascarar variações localizadas.
+
+-   Escala e conectividade:\
+    A conectividade fluvial para organismos aquáticos como peixes é altamente dependente da escala. A análise das barreiras à circulação pode exigir a concentração nos obstáculos locais (escala precisa), enquanto a avaliação da dinâmica populacional pode exigir a consideração dos alcances a montante e a jusante (escala ampla).
+
+-   Escala e qualidade da água:\
+    Os parâmetros de qualidade da água, como temperatura e oxigênio dissolvido, podem variar dramaticamente ao longo dos rios. A escolha da escala apropriada para amostragem e análise garante uma representação precisa desses padrões dinâmicos.
