@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.3.340">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>Ecologia de Paisagems com R: soluções - References</title>
+<title>Ecologia de Paisagems com R: soluções - 3&nbsp; Capítulo Respostas multiescala de espécies</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,27 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for citations */
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
 }
-.hanging-indent div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
 }
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}</style>
-
+</style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
@@ -49,7 +60,8 @@ div.csl-indent {
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
-<link href="./solutions03_especies.html" rel="prev">
+<link href="./references.html" rel="next">
+<link href="./solutions02_metricas.html" rel="prev">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -58,8 +70,7 @@ div.csl-indent {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -78,33 +89,24 @@ div.csl-indent {
     "search-submit-button-title": "Enviar"
   }
 }</script>
-
-
 </head>
-
 <body class="nav-sidebar floating">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./solutions01_escala.html">Soluções</a></li><li class="breadcrumb-item"><a href="./references.html">References</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./solutions01_escala.html">Soluções</a></li><li class="breadcrumb-item"><a href="./solutions03_especies.html"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo Respostas multiescala de espécies</span></a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Alternar barra lateral" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="Procurar" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto">
-    <div class="pt-lg-2 mt-2 text-left sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation floating overflow-auto"><div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Ecologia de Paisagems com R: soluções</a> 
         <div class="sidebar-tools-main">
@@ -120,7 +122,7 @@ div.csl-indent {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Bem-vindos</span></a>
@@ -134,15 +136,15 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./intro.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Introdução</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true">
@@ -151,8 +153,8 @@ div.csl-indent {
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./solutions01_escala.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">Capítulo Escala</span></span></a>
@@ -166,32 +168,69 @@ div.csl-indent {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./solutions03_especies.html" class="sidebar-item-text sidebar-link">
+  <a href="./solutions03_especies.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo Respostas multiescala de espécies</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./references.html" class="sidebar-item-text sidebar-link active">
+  <a href="./references.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">References</span></a>
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">Sumário</h2>
+   
+  <ul>
+<li>
+<a href="#pergunta-1" id="toc-pergunta-1" class="nav-link active" data-scroll-target="#pergunta-1"><span class="header-section-number">3.1</span> Pergunta 1</a>
+  <ul class="collapse">
+<li><a href="#resposta" id="toc-resposta" class="nav-link" data-scroll-target="#resposta"><span class="header-section-number">3.1.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-2" id="toc-pergunta-2" class="nav-link" data-scroll-target="#pergunta-2"><span class="header-section-number">3.2</span> Pergunta 2</a>
+  <ul class="collapse">
+<li><a href="#resposta-1" id="toc-resposta-1" class="nav-link" data-scroll-target="#resposta-1"><span class="header-section-number">3.2.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-3" id="toc-pergunta-3" class="nav-link" data-scroll-target="#pergunta-3"><span class="header-section-number">3.3</span> Pergunta 3</a>
+  <ul class="collapse">
+<li><a href="#resposta-2" id="toc-resposta-2" class="nav-link" data-scroll-target="#resposta-2"><span class="header-section-number">3.3.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-4" id="toc-pergunta-4" class="nav-link" data-scroll-target="#pergunta-4"><span class="header-section-number">3.4</span> Pergunta 4</a>
+  <ul class="collapse">
+<li><a href="#resposta-3" id="toc-resposta-3" class="nav-link" data-scroll-target="#resposta-3"><span class="header-section-number">3.4.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-5" id="toc-pergunta-5" class="nav-link" data-scroll-target="#pergunta-5"><span class="header-section-number">3.5</span> Pergunta 5</a>
+  <ul class="collapse">
+<li><a href="#resposta-4" id="toc-resposta-4" class="nav-link" data-scroll-target="#resposta-4"><span class="header-section-number">3.5.1</span> resposta</a></li>
+  </ul>
+</li>
+  <li>
+<a href="#pergunta-6" id="toc-pergunta-6" class="nav-link" data-scroll-target="#pergunta-6"><span class="header-section-number">3.6</span> Pergunta 6</a>
+  <ul class="collapse">
+<li><a href="#resposta-5" id="toc-resposta-5" class="nav-link" data-scroll-target="#resposta-5"><span class="header-section-number">3.6.1</span> resposta</a></li>
+  </ul>
+</li>
+  </ul></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">References</h1>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
+<h1 class="title">
+<span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo Respostas multiescala de espécies</span>
+</h1>
 </div>
 
 
@@ -204,16 +243,45 @@ div.csl-indent {
   </div>
   
 
-</header>
-
-<div id="refs" role="list" style="display: none">
-
+</header><p>Carregar os pacotes necessarios:</p>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://darrennorris.github.io/eprdados/">eprdados</a></span><span class="op">)</span></span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<section id="pergunta-1" class="level2" data-number="3.1"><h2 data-number="3.1" class="anchored" data-anchor-id="pergunta-1">
+<span class="header-section-number">3.1</span> Pergunta 1</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Verificar os dados entrevistas e carnivoros, usando funções "class()"; "str()" e ajudar "?". Descreva o conteúdo e compare as diferenças nesses dois conjuntos de dados. </span></p>
+<section id="resposta" class="level3" data-number="3.1.1"><h3 data-number="3.1.1" class="anchored" data-anchor-id="resposta">
+<span class="header-section-number">3.1.1</span> resposta</h3>
+<p>Para responder a pergunta você deve revisar as aulas e o conteúdo no …</p>
+</section></section><section id="pergunta-2" class="level2" data-number="3.2"><h2 data-number="3.2" class="anchored" data-anchor-id="pergunta-2">
+<span class="header-section-number">3.2</span> Pergunta 2</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Na aula "Organização de paisagens" vimos que as paisagens contemporâneas são uma resultado de i) variabilidade em condições abióticos; ii) interações bióticas; iii) distúrbios naturais e sucessão; e iv) padrões antrópicos no uso da terra. Usando Google Earth Timelapse e a forma interativa da mapview, verficar a paisagem acerca das propriadades. Com base na sua interpretação das mapas, as aulas, e literatura citado até agora (como Michalski et. al.&nbsp;2020, Michalski &amp; Peres 2005, Michalski &amp; Peres 2007), apresentar trés fatores que poderia explicar a distribuição espacial de especies de mamiferos na paisagem. Para cada fator inclui uma hipotese valida (e não trivial) junto com uma previsão que pode se testado com um estudo de Ecologia da Paisagem.</span></p>
+<section id="resposta-1" class="level3" data-number="3.2.1"><h3 data-number="3.2.1" class="anchored" data-anchor-id="resposta-1">
+<span class="header-section-number">3.2.1</span> resposta</h3>
+</section></section><section id="pergunta-3" class="level2" data-number="3.3"><h2 data-number="3.3" class="anchored" data-anchor-id="pergunta-3">
+<span class="header-section-number">3.3</span> Pergunta 3</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Identifique a espécie "sppD". Com base nos resultados dos boxplots e os artigos (Michalski &amp; Peres 2005; Michalski &amp; Peres 2007), sugerem três espécies de carnívoros que poderiam apresentar os mesmos padrões do sppD? Que informações/resultados adicionais o ajudariam a identificar a espécie sppD com maior certeza? Justifique suas escolhas em uma forma clara e concisa.</span></p>
+<section id="resposta-2" class="level3" data-number="3.3.1"><h3 data-number="3.3.1" class="anchored" data-anchor-id="resposta-2">
+<span class="header-section-number">3.3.1</span> resposta</h3>
+</section></section><section id="pergunta-4" class="level2" data-number="3.4"><h2 data-number="3.4" class="anchored" data-anchor-id="pergunta-4">
+<span class="header-section-number">3.4</span> Pergunta 4</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">O que sabemos sobre a espécie "sppD"?. Com base nos resultados obtidos: boxplots, graficos com a relação entre occorencia e proporção de floresta, resultados sobre escala do efeito e os artigos (Michalski &amp; Peres 2005; Michalski &amp; Peres 2007), forneça uma caracterização da espécie (por exemplo, especialista/generalistasensível/resiliente). Justifique a sua caracterização e interpretações com resultados específicos, destacando os resultados com maior relevância. Que informações/resultados adicionais o ajudariam a caracterizar a espécie sppD com maior certeza? Justifique suas escolhas de forma clara e concisa.</span></p>
+<section id="resposta-3" class="level3" data-number="3.4.1"><h3 data-number="3.4.1" class="anchored" data-anchor-id="resposta-3">
+<span class="header-section-number">3.4.1</span> resposta</h3>
+</section></section><section id="pergunta-5" class="level2" data-number="3.5"><h2 data-number="3.5" class="anchored" data-anchor-id="pergunta-5">
+<span class="header-section-number">3.5</span> Pergunta 5</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">O que sabemos sobre as três espécies de carnívoros? Com base nos resultados obtidos: boxplots, graficos com a relação entre occorencia e proporção de floresta, resultados sobre escala do efeito e os artigos (Michalski &amp; Peres 2005; Michalski &amp; Peres 2007), forneça uma identificação (nome científico e nome comum) e caracterização de cada espécie (por exemplo, especialista/generalista/sensível/resiliente). Justifique a sua identificação, caracterização e interpretações com resultados específicos, destacando os resultados com maior relevância. Que informações/resultados adicionais o ajudariam a caracterizar as espécies com maior certeza? Justifique suas escolhas de forma clara e concisa.</span></p>
+<section id="resposta-4" class="level3" data-number="3.5.1"><h3 data-number="3.5.1" class="anchored" data-anchor-id="resposta-4">
+<span class="header-section-number">3.5.1</span> resposta</h3>
+</section></section><section id="pergunta-6" class="level2" data-number="3.6"><h2 data-number="3.6" class="anchored" data-anchor-id="pergunta-6">
+<span class="header-section-number">3.6</span> Pergunta 6</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Vimos como a incerteza quanto à escala do efeito é provavelmente, pelo menos em parte, uma consequência da correlação entre escalas. Também é possível que, além da cobertura florestal, existam outros fatores que afetem a ocorrência das três espécies na paisagem estudada. Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no capitulo, apresentam algumas hipóteses alternativas que poderiam explicar a incerteza nos modelos para as três espécies. Forneça recomendações para variáveis adicionais que poderiam ser incluídas nos modelos para testar suas hipóteses. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
+<section id="resposta-5" class="level3" data-number="3.6.1"><h3 data-number="3.6.1" class="anchored" data-anchor-id="resposta-5">
+<span class="header-section-number">3.6.1</span> resposta</h3>
 
 
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -445,14 +513,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
   }
 });
-</script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="./solutions03_especies.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">3</span>&nbsp; <span class="chapter-title">Capítulo Respostas multiescala de espécies</span></span>
+</script><nav class="page-navigation"><div class="nav-page nav-page-previous">
+      <a href="./solutions02_metricas.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">2</span>&nbsp; <span class="chapter-title">Capítulo Métricas</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
+      <a href="./references.html" class="pagination-link">
+        <span class="nav-page-text">References</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
   </div>
 </nav>
 </div> <!-- /content -->
