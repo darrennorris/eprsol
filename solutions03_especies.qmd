@@ -31,7 +31,57 @@ library(eprdados)
 
 ### resposta
 
-Para responder a pergunta você deve revisar as aulas e o conteúdo no ...
+Para responder a pergunta você deve revisar os exemplos no capítulo.
+
+Carregar os dados:
+
+```{r}
+#| label: load-data
+#| warning: false
+#| message: false
+#| echo: true
+#| eval: true
+
+entrevistas <- eprdados::entrevistas
+carnivoros <- eprdados::carnivoros
+
+```
+
+Identifique e compare os tipos de objeto:
+
+```{r}
+#| label: compare-class
+#| warning: false
+#| message: false
+#| echo: true
+#| eval: true
+
+class(entrevistas)
+class(carnivoros)
+```
+
+Comparando os dois objetos vemos que o objeto `entrevistas` possui mais classes que o `carnivoros`. A `class()` nos conta o que podemos fazer com os objetos em R. As entrevistas são uma classe [sf](https://r-spatial.github.io/sf/articles/), que é um vetor espacial - assim sendo possamos:
+
+-   fazer [mapas](https://r-spatial.github.io/sf/articles/sf5.html) : <https://r-spatial.github.io/sf/articles/sf5.html> .
+
+-   executar análises espaciais, como calcular [métricas de paisagem](https://darrennorris.github.io/epr/cap02.html) : <https://darrennorris.github.io/epr/cap02.html> .
+
+Ambos os objetos são da class "data.frame". Podemos, portanto, traçar gráficos e construir modelos com os dados de ambos os objetos.
+
+Podemos olhar sobre a estrutura com o codigo a seguir:
+
+```{r}
+#| label: compare-structure
+#| warning: false
+#| message: false
+#| echo: true
+#| eval: true
+
+str(entrevistas)
+str(carnivoros)
+```
+
+Usando a função `str()` nos mostra que entrevistas possui 106 linhas (uma linha para cada propriedade) e o carnivoros possui 2544 linhas (106 propriedades vezes 8 distâncias de buffer vezes 3 espécies de carnívoros). Vemos também que o objeto carnivoros possui mais colunas, com informações sobre as propriedades, espécies e métricas da paisagem. É interessante que isso inclua colunas com coordenadas geográficas, mas o objeto não é espacial.
 
 ## Pergunta 2
 
@@ -39,31 +89,97 @@ Para responder a pergunta você deve revisar as aulas e o conteúdo no ...
 
 ### resposta
 
+Para desenvolver a sua resposta, você deve olhar para exemplos de mamíferos que ocorrem na área de estudo [@Michalski2020int]. Em seguida, identifique os fatores que são conhecidos por serem importantes para diferentes espécies [@MICHALSKI2005383; @MICHALSKI2007conbio; @regolin2017forest].
+O que é apresentado aqui é uma estrutura fundamental. Use os exemplos para desenvolver suas próprias respostas.
+
+#### Exemplos de fatores
+
+Sabemos que os padrões na distribuição e abundância dos mamíferos respondem a uma variedade de diferentes características das paisagens. Olhando para os mapas podemos identificar vários fatores potencialmente importantes. Abaixo está uma lista com alguns exemplos. Esta não é uma lista completa e não representa necessariamente os fatores mais importantes.
+
+1.  Variabilidade em condições abióticos:\
+    São aqueles relacionados ao ambiente físico, como clima, solo e topografia. Há muito pouca variação de altitude na área de estudo. Sabemos que os mamíferos são endotérmicos e, que em torno do equador há pouca variação climática num espaço do tamanho da área de estudo. Portanto, é muito pouco provável que o clima e altitude afecte os padrões dos mamíferos na área de estudo.
+    -   Proximidade com o rio Amazonas.
+    
+2.  Interações bióticas:\
+    São aqueles relacionados às interações entre os organismos, como predação, competição e mutualismo.
+    -   Predação. A presença de predadores pode limitar a abundância de presas, como veados e capivaras.
+    -   Interferência competitiva (interference competition), que ocorre quando indivíduos de espécies diferentes competem diretamente por recursos. Por exemplo, um gato-maracajá (*Leopardus wiedii*), um predador especialista e ágil de pequenas presas arbóreas, pode ser forçada a abandonar uma presa recém-capturada por uma jaguatirica (*Leopardus pardalis*), um predador maior e mais forte. Tais encontros podem limitar o sucesso de alimentação do gato-maracajá e potencialmente restringir a sua distribuição dentro do habitat partilhado.
+    -   Liberação de mesopredadores (meso-predator release), em que a remoção de um predador de topo desencadeia consequências não intencionais para níveis tróficos inferiores. Por exemplo, quando a caça humana reduza as populações de onças-pintadas (*Panthera onca*), as jaguatiricas podem experimentar um aumento na abundância devido à redução da competição intraespecífica e da pressão de predação. No entanto, isso pode levar a um efeito dominó, com as populações de jaguatiricas aumentando e exercendo pressão crescente sobre presas menores, como roedores e aves. Isso perturba a teia alimentar do ecossistema e pode ter efeitos cascateantes nas comunidades de plantas e na biodiversidade geral.
+    
+3.  Distúrbios naturais e sucessão:\
+    podem criar oportunidades para a colonização de novas áreas ou, por outro lado, podem levar à extinção de espécies.
+    -   Incêndios florestais.
+    -   Inundações.
+    -   Ecótonos e áreas de transição entre diferentes tipos de habitats.
+    -   Áreas que foram desmatadas, mas foram abandonadas e estão retornando à natureza.
+    
+4.  Padrões antrópicos no uso da terra:\
+    São aqueles relacionados às atividades humanas, como desmatamento, agricultura, caça e mineração.
+    -   Estradas.
+    -   Centros urbanos.
+    -   Casas.
+    -   Uso da terra - agricultura.
+    -   Perda de cobertura natural da terra.
+
+
+#### Exemplos de hipótese
+Existem centenas de hipóteses ecológicas potencialmente relevantes. Krebs (1972) sugeriu que: 'Ecologia é o estudo científico das interações que determinam a distribuição e abundância dos organismos'. Como tal, existe uma componente espacial associada a muitas (se não à maioria) das hipóteses ecológicas. São listados alguns exemplos que foram aplicados no contexto da ecologia da paisagem. Esta não é uma lista completa e é usada para fornecer exemplos ilustrativos.
+
+A distribuição espacial e a abundância de mamíferos estão intrinsecamente ligadas a diversas características da paisagem, abrangendo condições abióticas, interações biológicas, perturbações e sucessão naturais e pressões induzidas pelo homem.
+
+2.  Interações bióticas:\
+    -   Predação. 
+    -   Presa. Hipótese de alocação de risco (risk allocation hypothesis).
+    
+  
+3.  Distúrbios naturais e sucessão:\    
+Distúrbios naturais e processos de sucessão moldam as comunidades de mamíferos. A Hipótese de Perturbação Intermediária (Intermediate Disturbance Hypothesis) propõe que níveis moderados de perturbação maximizam a biodiversidade. Pesquisas nas savanas brasileiras apoiam essa hipótese, com estudos indicando que frequências intermediárias de incêndios aumentam a diversidade de plantas e pequenos mamíferos.
+
+4.  Padrões antrópicos no uso da terra:\    
+Nas últimas duas décadas, os ecologistas adotaram o conceito de “paisagem do medo” (landscapes of fear) para descrever a variação espacial no risco de predação conforme percebido pelas presas em toda a sua área de alimentação ou área de vida [@gaynor2019landscapes]. Este conceito baseia-se nas disciplinas de ecologia comportamental, populacional, comunitária e espacial para considerar o papel do risco de predação espacialmente heterogêneo na condução do comportamento das presas e das cascatas tróficas. O termo “paisagem do medo” foi cunhado por Laundré e colegas em 2001 em seu artigo sobre vigilância de veados e bisões e comportamento de forrageamento em resposta à reintrodução de lobos em Yellowstone. Os humanos remodelam paisagens de medo através da remoção e reintrodução de predadores, modificação de habitat e intensificação de atividades como caça e recreação. Predadores invasores ou mudanças de habitat induzidas pelo homem podem criar armadilhas ecológicas, nas quais as presas não conseguem otimizar o comportamento devido a paisagens anacrónicas de medo. Os humanos também representam um novo “superpredador” de ponta. Em locais onde há caça, a atividade humana letal cria paisagens de medo potencialmente novas para as espécies-alvo, com possíveis consequências para a fisiologia, a demografia das presas e a estrutura das comunidades humanos-naturais. No entanto, os animais percebem o risco dos humanos mesmo na ausência de reforço letal, e as paisagens antropogénicas de medo têm sido associadas a consequências demográficas. A importância relativa da paisagem do medo na formação da dinâmica populacional e das interacções entre espécies varia entre sistemas, e a actividade humana está a alterar e a criar novas paisagens de medo para os animais selvagens. Este é apenas um exemplo de como as hipóteses estão indo além da fragmentação florestal e dos limiares nos padrões espaciais.
+
 
 ## Pergunta 3
 
-`r kableExtra::text_spec('Identifique a espécie "sppD". Com base nos resultados dos boxplots e os artigos (Michalski & Peres 2005; Michalski & Peres 2007), sugerem três espécies de carnívoros que poderiam apresentar os mesmos padrões do sppD? Que informações/resultados adicionais o ajudariam a identificar a espécie sppD com maior certeza? Justifique suas escolhas em uma forma clara e concisa.', color = "blue", bold = TRUE)`
+`r kableExtra::text_spec('Identifique a espécie "sppD". Com base nos resultados dos boxplots e os artigos (Michalski & Peres 2005; Michalski & Peres 2007, Regolin et. al. 2017), sugerem três espécies de carnívoros que poderiam apresentar os mesmos padrões do sppD? Que informações/resultados adicionais o ajudariam a identificar a espécie sppD com maior certeza? Justifique suas escolhas em uma forma clara e concisa.', color = "blue", bold = TRUE)`
 
 ### resposta
 
+Os boxplots mostram que, em média, onde a espécie está presente há mais cobertura florestal. Portanto, as espécies potenciais serão três daquelas que mostram uma relação positiva com a cobertura florestal/tamanho da mancha florestal.
+
+Para podermos identificar com maior certeza precisamos de mais detalhes sobre a taxonomia (que tipo de carnívoro - Canidae, Felidae, Mephitidae, Mustelidae ou Procyonidae) e características funcionais como tamanho corporal e área de vida. Além disso, mais dados sobre como a distribuição das espécies muda com os padrões da paisagem – sabemos que existe uma relação positiva com floresta, mas não sabemos mais nada. Por exemplo, poderíamos ser mais precisos se soubéssemos quão forte é a relação ou se é linear ou não.
 
 ## Pergunta 4
 
-`r kableExtra::text_spec('O que sabemos sobre a espécie "sppD"? Com base nos resultados obtidos: boxplots, graficos com a relação entre occorencia e proporção de floresta, resultados sobre escala do efeito e os artigos (Michalski & Peres 2005; Michalski & Peres 2007), forneça uma caracterização da espécie (por exemplo, especialista/generalistasensível/resiliente). Justifique a sua caracterização e interpretações com resultados específicos, destacando os resultados com maior relevância. Que informações/resultados adicionais o ajudariam a caracterizar a espécie sppD com maior certeza? Justifique suas escolhas de forma clara e concisa.', color = "blue", bold = TRUE)`
+`r kableExtra::text_spec('O que sabemos sobre a espécie "sppD"? Com base nos resultados obtidos: boxplots, graficos com a relação entre occorencia e proporção de floresta, resultados sobre escala do efeito e os artigos (Michalski & Peres 2005; Michalski & Peres 2007; Regolin et. al. 2017), forneça uma caracterização da espécie (por exemplo, especialista/generalistasensível/resiliente). Justifique a sua caracterização e interpretações com resultados específicos, destacando os resultados com maior relevância. Que informações/resultados adicionais o ajudariam a caracterizar a espécie sppD com maior certeza? Justifique suas escolhas de forma clara e concisa.', color = "blue", bold = TRUE)`
 
 ### resposta
+
+Para responder a esta pergunta, você precisa resumir os resultados. Isto pode ser feito de diferentes maneiras, por exemplo, comece com o resultado mais geral e importante e depois siga uma sequência lógica até o mais específico.
+
+1.   Todas as análises e resultados mostram que a presença de sppD tem uma forte relação positiva com a cobertura florestal.
+
+2.  A análise da escala de efeito mostrou que na escala de 1 km a sppD estava presente quando havia em media aproximadamente 78% de cobertura florestal (boxplots). O modelo de regressão logística nesta mesma escala mostrou que foi obtida uma probabilidade de ocorrência de 50% com aproximadamente 70% de cobertura florestal.
+
+3.  Todas as análises e resultados mostram variação na relação em diferentes escalas. Usando modelos de regressão logística para identificar a escala do efeito da cobertura florestal na ocorrência de sppD, identificamos a escala de 1km como a mais importante e útil. Os resultados do modelo nesta escala tiveram a maior log-verossimilhanças e o maior desvio explicado.
+
+4.  Todos os resultados mostraram muitas variações inexplicáveis nos padrões de ocorrência nas 106 propriedades. Boxplots mostraram que a cobertura florestal não explicou a variação nas ausências. Usando modelos de regressão logística descobrimos que o melhor modelo (escala de 1km) explicou cerca de 37% do desvio nos dados.
+
+A identificação de espécies de carnívoros na paisagem é uma tarefa complexa que pode ser dificultada pela falta de dados. Para podermos identificar a espécie "sppD" com maior certeza, precisamos de mais informações sobre sua taxonomia (que tipo de carnívoro é - Canidae, Felidae, Mephitidae, Mustelidae ou Procyonidae), características funcionais (como tamanho corporal e área de vida) e distribuição espacial.
+
+A distribuição espacial da espécie é um fator importante a ser considerado. Sabemos que a "sppD" está associada à floresta, mas não sabemos como sua distribuição (principalmente as ausências) é afetada por outros fatores, como os impactos humanos.  A inclusão de variáveis adicionais para representar outros fatores, como os impactos humanos, pode melhorar o modelo de distribuição da espécie e fornecer estimativas mais precisas da escala do efeito. 
+
 
 ## Pergunta 5
 
-`r kableExtra::text_spec('O que sabemos sobre as três espécies de carnívoros? Com base nos resultados obtidos: boxplots, graficos com a relação entre occorencia e proporção de floresta, resultados sobre escala do efeito e os artigos (Michalski & Peres 2005; Michalski & Peres 2007), forneça uma identificação (nome científico e nome comum) e caracterização de cada espécie (por exemplo, especialista/generalista/sensível/resiliente). Justifique a sua identificação, caracterização e interpretações com resultados específicos, destacando os resultados com maior relevância. Que informações/resultados adicionais o ajudariam a caracterizar as espécies com maior certeza? Justifique suas escolhas de forma clara e concisa.', color = "blue", bold = TRUE)`
-
+`r kableExtra::text_spec('O que sabemos sobre as três espécies de carnívoros? Com base nos resultados obtidos: boxplots, graficos com a relação entre occorencia e proporção de floresta, resultados sobre escala do efeito e os artigos (Michalski & Peres 2005; Michalski & Peres 2007; Regolin et. al. 2017), forneça uma identificação (nome científico e nome comum) e caracterização de cada espécie (por exemplo, especialista/generalista/sensível/resiliente). Justifique a sua identificação, caracterização e interpretações com resultados específicos, destacando os resultados com maior relevância. Que informações/resultados adicionais o ajudariam a caracterizar as espécies com maior certeza? Justifique suas escolhas de forma clara e concisa.', color = "blue", bold = TRUE)`
 
 ### resposta
-
+Use a leitura sugerida e o exemplo de resposta 4 para responder a esta pergunta.
 
 ## Pergunta 6
 
 `r kableExtra::text_spec("Vimos como a incerteza quanto à escala do efeito é provavelmente, pelo menos em parte, uma consequência da  correlação entre escalas. Também é possível que, além da cobertura florestal, existam outros fatores que afetem a ocorrência das três espécies na paisagem estudada.  Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no capitulo, apresentam algumas hipóteses alternativas que poderiam explicar a incerteza nos modelos para as três espécies. Forneça recomendações para variáveis adicionais que poderiam ser incluídas nos modelos para testar suas hipóteses. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.", color = "blue", bold = TRUE)`
 
 ### resposta
-
+Use a leitura sugerida e o exemplos de respostas anteriores para responder a esta pergunta.
