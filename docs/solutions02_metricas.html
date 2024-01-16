@@ -236,6 +236,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li><a href="#resposta-7" id="toc-resposta-7" class="nav-link" data-scroll-target="#resposta-7"><span class="header-section-number">2.8.1</span> resposta</a></li>
   </ul>
 </li>
+  <li>
+<a href="#pergunta-9" id="toc-pergunta-9" class="nav-link" data-scroll-target="#pergunta-9"><span class="header-section-number">2.9</span> Pergunta 9</a>
+  <ul class="collapse">
+<li><a href="#resposta-8" id="toc-resposta-8" class="nav-link" data-scroll-target="#resposta-8"><span class="header-section-number">2.9.1</span> resposta</a></li>
+  </ul>
+</li>
   </ul></nav>
     </div>
 <!-- main -->
@@ -333,21 +339,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </section></section><section id="pergunta-4" class="level2" data-number="2.4"><h2 data-number="2.4" class="anchored" data-anchor-id="pergunta-4">
 <span class="header-section-number">2.4</span> Pergunta 4</h2>
-<p><span style=" font-weight: bold;    color: blue !important;">Em menos de 200 palavras apresente a sua interpretação do gráfico em figura 2.4.</span></p>
+<p><span style=" font-weight: bold;    color: blue !important;">Por que é melhor usar métricas como proporção da área central (proportion of core area) para comparações multiescala na ecologia da paisagem? Inclua uma comparação com outras métricas, como área de mancha (patch area), para ilustrar por que as métricas expressas como proporção são mais apropriadas para comparações multiescala. Justifique a sua resposta de forma clara e concisa (menos de 500 palavras). Apoie sua resposta com exemplos da literatura científica.</span></p>
+<hr>
 <section id="resposta-3" class="level3" data-number="2.4.1"><h3 data-number="2.4.1" class="anchored" data-anchor-id="resposta-3">
 <span class="header-section-number">2.4.1</span> resposta</h3>
-<p>A proporção de floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A proporção de floresta aumenta de zero a 51 por cento, mas a relação não é linear. Os valores aumentam rapidamente até extensões de 8 km (6% por quilometro em média entre 0 e 8 quilômetros). Após isso a curva parece atingir uma assíntota (aumentando 0.25% por quilometro entre 8 e 16 quilômetros).</p>
-</section></section><section id="pergunta-5" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="pergunta-5">
+<p>Existem vários motivos para escolher a métrica. A resposta deve ser baseada nas aulas e na literatura sugerida e deve incluir algumas das seguintes considerações.</p>
+<p>Embora métricas como área de mancha possam ser informativas, o uso de métricas expressas como proporções (como a proporção da área central) apresenta várias vantagens quando se trata de comparações multiescala:</p>
+<ol type="1">
+<li>Padronização em diferentes escalas:
+<ul>
+<li>Área de mancha: A área de mancha absoluta é irrelevante quando se compara em diferentes escalas. A área de mancha possível aumenta com a escala - não é possível ter uma mancha de 1 km numa escala de 100 metros. Além disso, um fragmento florestal pode ser considerado grande em uma escala local, mas pequeno em uma escala regional. Isso torna as comparações multiescala baseadas em valores absolutos de área não confiáveis.</li>
+<li>Proporção da área central: Expressa como proporção da paisagem total, ela padroniza a área central independentemente do tamanho geral da paisagem.</li>
+</ul>
+</li>
+<li>Foco no habitat interior:
+<ul>
+<li>Área de mancha: Essa métrica captura o tamanho total de um mancha, incluindo suas bordas. Os habitats de borda geralmente experimentam condições microclimáticas e pressões ecológicas diferentes em comparação com o interior.</li>
+<li>Proporção da área central: Ela isola o habitat interior excluindo uma zona de amortecimento da borda com base em uma profundidade específica (por exemplo, 30m). Isso concentra-se no habitat mais crucial para espécies sensíveis aos efeitos de borda, fornecendo uma comparação mais relevante do ponto de vista ecológico.</li>
+</ul>
+</li>
+<li>Aplicabilidade a diferentes tipos de paisagem:
+<ul>
+<li>Área de mancha: Seu apelo universal pode ser enganoso, pois sua interpretação varia dependendo do tipo de paisagem. Uma pequena área pode ser significativa em uma paisagem agrícola fragmentada, enquanto uma grande área pode ser menos significativa em uma paisagem florestal mais contínua.</li>
+<li>Proporção da área central: A expressão relativa a torna mais aplicável a diferentes tipos de paisagem e permite comparações mais conscientes do contexto. Exemplo: Imagine comparar duas paisagens: um pequeno parque urbano com um fragmento florestal de 100 hectares e um grande parque nacional com um área central florestal de 10,000 hectares. Ambos têm a mesma proporção da área central (10%), indicando disponibilidade de habitat interior semelhante para espécies dependentes da área central. No entanto, suas áreas de mancha absolutas seriam drasticamente diferentes e forneceriam uma comparação multiescala potencialmente enganosa.</li>
+</ul>
+</li>
+</ol>
+<p>No geral, a proporção da área central emerge como uma métrica mais robusta e informativa para comparações multiescala na ecologia da paisagem. Seu foco no habitat interior e aplicabilidade em diferentes escalas a tornam uma ferramenta valiosa para entender a importância ecológica das padrões espaciais e heterogeneidade nas paisagens em diferentes níveis de detalhe. Embora a área de mancha é talvez a mais importante de todas as métricas, é crucial reconhecer suas limitações quando se busca comparações informativas e robustas em diferentes escalas.</p>
+<p>Aqui estão alguns exemplos específicos de como a proporção da área central pode ser usada para comparações multiescala na ecologia da paisagem:</p>
+<ul>
+<li><p>Comparação da conectividade entre paisagens:<br>
+A proporção da área central pode ser usada para comparar a conectividade entre paisagens em diferentes escalas. Por exemplo, a proporção da área central de corredores ecológicos pode ser usada para comparar a conectividade entre fragmentos florestais em diferentes escalas espaciais.</p></li>
+<li><p>Comparação da diversidade de habitat:<br>
+A proporção da área central pode ser usada para comparar a diversidade de habitat entre paisagens em diferentes escalas. Por exemplo, a proporção da área central de diferentes tipos de habitat (as classes categóricas em um raster) pode ser usada para comparar a diversidade de habitat em diferentes escalas espaciais.</p></li>
+</ul></section></section><section id="pergunta-5" class="level2" data-number="2.5"><h2 data-number="2.5" class="anchored" data-anchor-id="pergunta-5">
 <span class="header-section-number">2.5</span> Pergunta 5</h2>
-<p><span style=" font-weight: bold;    color: blue !important;">Comparar os resultados apresentados nas figuras com modelos lineares e não-lineares. Como podemos estabelecer qual seria o melhor modelo? Qual modelo seria mais adequado para identificar limiares no padrão de área central de floresta?</span></p>
+<p><span style=" font-weight: bold;    color: blue !important;">Em menos de 200 palavras apresente a sua interpretação do gráfico em figura 2.4.</span></p>
 <section id="resposta-4" class="level3" data-number="2.5.1"><h3 data-number="2.5.1" class="anchored" data-anchor-id="resposta-4">
 <span class="header-section-number">2.5.1</span> resposta</h3>
-<p>Uma inspeção visual sugere que um modelo linear sem qualquer transformação tem os maiores intervalos de confiança e é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Todos os modelos melhorariam (por exemplo os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer.</p>
+<p>A proporção de floresta muda com a escala espacial, representado pela extensão do buffer em torno do ponto amostral. Existe uma relação positiva entre o percentual de área central e a extensão. A proporção de floresta aumenta de zero a 51 por cento, mas a relação não é linear. Os valores aumentam rapidamente até extensões de 8 km (6% por quilometro em média entre 0 e 8 quilômetros). Após isso a curva parece atingir uma assíntota (aumentando 0.25% por quilometro entre 8 e 16 quilômetros).</p>
 </section></section><section id="pergunta-6" class="level2" data-number="2.6"><h2 data-number="2.6" class="anchored" data-anchor-id="pergunta-6">
 <span class="header-section-number">2.6</span> Pergunta 6</h2>
-<p><span style=" font-weight: bold;    color: blue !important;">Aumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar dados novas (isso é cinco distâncias novas e as sete distâncias originais) em um objeto com nome de "amostras_metrica_nova". ii) usando ggplot2 fazer um gráfico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.</span></p>
+<p><span style=" font-weight: bold;    color: blue !important;">Comparar os resultados apresentados nas figuras com modelos lineares e não-lineares. Como podemos estabelecer qual seria o melhor modelo? Qual modelo seria mais adequado para identificar limiares no padrão de área central de floresta?</span></p>
 <section id="resposta-5" class="level3" data-number="2.6.1"><h3 data-number="2.6.1" class="anchored" data-anchor-id="resposta-5">
 <span class="header-section-number">2.6.1</span> resposta</h3>
+<p>Uma inspeção visual sugere que um modelo linear sem qualquer transformação tem os maiores intervalos de confiança e é o pior modelo. Um modelo linear com dados transformados parece ajustar-se proximo aos dados. O modelo não linear mostra melhor os padrões nos dados originais. Mas essas avaliações são subjetivas. Deveríamos realizar testes estatísticos para confirmar estas avaliações visuais. Todos os modelos melhorariam (por exemplo os intervalos de confiança ficariam menores) se aumentássemos o tamanho da amostra calculando a métrica com mais distâncias de buffer.</p>
+</section></section><section id="pergunta-7" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="pergunta-7">
+<span class="header-section-number">2.7</span> Pergunta 7</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Aumentar o tamanho amostral na analise. Usando os exemplos de codigo anteriores, aumentar o numero de buffers entre 125 m e 16 km. i) Calcular a metrica cpland para 12 distâncias de bufferes e montar dados novas (isso é cinco distâncias novas e as sete distâncias originais) em um objeto com nome de "amostras_metrica_nova". ii) usando ggplot2 fazer um gráfico com os novos dados mostrando valores de extensão no eixo x e proporção da floresta central no eixo y. Ajustar o codigo para incluir intervalos de confiança junto com o modelo linear. Comparar os resultados apresentados nas figuras com modelos lineares sem transformação. O que aconteceu com o ajuste do modelo e os intervalos de confiançã? Foi útil incluir mais distâncias? Justifique as suas respostas de forma clara e concisa. Inclua cópias do seu código e gráficos na sua resposta. Você pode usar o printscreen para mostrar o RStudio com seu código e gráficos.</span></p>
+<section id="resposta-6" class="level3" data-number="2.7.1"><h3 data-number="2.7.1" class="anchored" data-anchor-id="resposta-6">
+<span class="header-section-number">2.7.1</span> resposta</h3>
 <p>Passos para desenvolver uma resposta:</p>
 <ol type="1">
 <li><p>Decida as distâncias para os cinco novos buffers.</p></li>
@@ -461,16 +502,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="solutions02_metricas_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid" width="672"></p>
 </div>
 </div>
-</section></section><section id="pergunta-7" class="level2" data-number="2.7"><h2 data-number="2.7" class="anchored" data-anchor-id="pergunta-7">
-<span class="header-section-number">2.7</span> Pergunta 7</h2>
-<p><span style=" font-weight: bold;    color: blue !important;">Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os gráficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
-<section id="resposta-6" class="level3" data-number="2.7.1"><h3 data-number="2.7.1" class="anchored" data-anchor-id="resposta-6">
-<span class="header-section-number">2.7.1</span> resposta</h3>
 </section></section><section id="pergunta-8" class="level2" data-number="2.8"><h2 data-number="2.8" class="anchored" data-anchor-id="pergunta-8">
 <span class="header-section-number">2.8</span> Pergunta 8</h2>
-<p><span style=" font-weight: bold;    color: blue !important;">Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no tutorial, selecione pelo menos oito métricas de nível classe para caracterizar a paisagem de estudo e objectivos da sua projeto em grupo. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
+<p><span style=" font-weight: bold;    color: blue !important;">Com base nos resultados apresentados (figura e tabela) caracterisar as mudançãs na paisagem em função de extensões diferentes. Olhando os gráficos prever como seria o padrão para extensões maiores (lembrando que valores são doubrados - por exemplo raio de 250 metros gerar uma extensão de 500 metros). Seria relevante repetir incluindo calculos para extensões maiores (por exemplo 64 km e 128 km)? Justifique sua caracterização e previsões de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
 <section id="resposta-7" class="level3" data-number="2.8.1"><h3 data-number="2.8.1" class="anchored" data-anchor-id="resposta-7">
 <span class="header-section-number">2.8.1</span> resposta</h3>
+</section></section><section id="pergunta-9" class="level2" data-number="2.9"><h2 data-number="2.9" class="anchored" data-anchor-id="pergunta-9">
+<span class="header-section-number">2.9</span> Pergunta 9</h2>
+<p><span style=" font-weight: bold;    color: blue !important;">Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no tutorial, selecione pelo menos oito métricas de nível classe para caracterizar a paisagem de estudo e objectivos da sua projeto em grupo. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.</span></p>
+<section id="resposta-8" class="level3" data-number="2.9.1"><h3 data-number="2.9.1" class="anchored" data-anchor-id="resposta-8">
+<span class="header-section-number">2.9.1</span> resposta</h3>
 
 
 </section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">

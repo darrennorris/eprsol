@@ -320,10 +320,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </ol>
 <p>Com base nas informações que já conhecemos, existem diferentes opções para saber a extensão em número de pixels desse recorte <code>buffer.forest1.1km</code>. Como o raio da buffer usado para fazer o corte foi de 1 km podemos estimar sem R, assim:</p>
 <ul>
-<li><p>i) A extensão seria o diametro da buffer (raio x 2 = 2km).</p></li>
-<li><ol start="2" type="i">
-<li>Sabemos que o resolução (comprimento) de cada pixel é cerca de 29,9 metros. Portanto, a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.</li>
-</ol></li>
+<li><p>A extensão seria o diametro da buffer (raio x 2 = 2km).</p></li>
+<li><p>Sabemos que o resolução (comprimento) de cada pixel é cerca de 29,9 metros. Portanto, a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.</p></li>
 </ul>
 <p>No R podemos obter o valor exato atraves funções de <code><a href="https://rdrr.io/pkg/terra/man/dimensions.html">ncol()</a></code> e <code><a href="https://rdrr.io/pkg/terra/man/dimensions.html">nrow()</a></code>, respectivamente para extensoes no sentido leste-oeste e norte-sul, assim:</p>
 <div class="cell">
@@ -405,7 +403,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="resposta-5" class="level3" data-number="1.6.1"><h3 data-number="1.6.1" class="anchored" data-anchor-id="resposta-5">
 <span class="header-section-number">1.6.1</span> resposta</h3>
 <p>Para responder a pergunta você deve revisar as aulas (“ECOLOGIA DA PAISAGEM” e “Organização de paisagens”) e o conteúdo no capitulo Escala.</p>
-<p>Como entender como a escala pode afetar a análise em diferentes ambientes? Existem diferenças importantes nos fatores a serem considerados entre os dois ambientes. Por exemplo, os rios são lineares, com direção (anisotropia), enquanto os terrestres são menos específicos. Como os padrões e escalas relevantes podem variar dependendo de fatores além das características funcionais das espécies como o tamanho do rio onde as espécies ocorrem. Em outras palavras, dependendo da espécie escolhida, é provável que haja fatores adicionais que precisam ser considerados.</p>
+<p>Como entender como a escala pode afetar a análise em diferentes ambientes? Existem diferenças importantes nos fatores a serem considerados entre os dois ambientes. Por exemplo, os rios são lineares, com direção (anisotropia), enquanto os terrestres são menos específicos. Os padrões e escalas relevantes podem variar dependendo de fatores além das características funcionais das espécies como o tamanho do rio onde as espécies ocorrem. Em outras palavras, dependendo da espécie escolhida, é provável que haja fatores adicionais que precisam ser considerados.</p>
 <p>Compreender os efeitos de escala é crucial para análises precisas e relevantes na ecologia da paisagem. As complexidades específicas associadas às florestas e aos rios realçam a necessidade de uma abordagem específica ao contexto para a selecção e análise da escala. Ao reconhecer e contabilizar as dependências de escala, os ecologistas paisagísticos podem obter conhecimentos mais profundos sobre as relações complexas entre padrões e processos ecológicos em diferentes extensões espaciais.</p>
 <section id="florestas" class="level4" data-number="1.6.1.1"><h4 data-number="1.6.1.1" class="anchored" data-anchor-id="florestas">
 <span class="header-section-number">1.6.1.1</span> Florestas:</h4>

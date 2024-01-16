@@ -146,11 +146,9 @@ Para responder a pergunta você deve revisar o conteúdo no capitulo Escala, esp
 
 Com base nas informações que já conhecemos, existem diferentes opções para saber a extensão em número de pixels desse recorte `buffer.forest1.1km`. Como o raio da buffer usado para fazer o corte foi de 1 km podemos estimar sem R, assim:
 
--   i\) A extensão seria o diametro da buffer (raio x 2 = 2km).
+-   A extensão seria o diametro da buffer (raio x 2 = 2km).
 
--   
-
-    ii) Sabemos que o resolução (comprimento) de cada pixel é cerca de 29,9 metros. Portanto, a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.
+-   Sabemos que o resolução (comprimento) de cada pixel é cerca de 29,9 metros. Portanto, a extensão em número de pixels seria aproximadamente: 2000 metros / 29,9 metros = 66,89 pixels.
 
 No R podemos obter o valor exato atraves funções de `ncol()` e `nrow()`, respectivamente para extensoes no sentido leste-oeste e norte-sul, assim:
 
@@ -183,8 +181,8 @@ Com base nas informações que já conhecemos, existem diferentes opções para 
 
 E depois, repetindo o mesmo processo para os outros valores. Isso seria possivel tanto com um calculador, quanto com ferramentas de planilha como [Excel](https://www.microsoft.com/pt-br/microsoft-365/excel) e [Calc](https://pt.libreoffice.org/descobrir/calc/).
 
-Podemos responder usando R em 3 passos assim:
-Passo 1 entrada de dados:
+Podemos responder usando R em 3 passos assim: Passo 1 entrada de dados:
+
 ```{r}
 # 1 construir uma data frame "raios" com os valores
 raio_m <-  c(250, 500, 1000,2000, 4000)
@@ -196,6 +194,7 @@ raios
 ```
 
 Passo 2 calculos para o gráfico:
+
 ```{r}
 # 2 Calculos para o gráfico.
 # Unidades diferentes (raio em metros, área em hectares). 
@@ -210,6 +209,7 @@ raios
 ```
 
 Passo 3 fazer o grafico:
+
 ```{r}
 
 # fazer o grafico
@@ -221,7 +221,6 @@ Passo 3 fazer o grafico:
 
 ```
 
-
 ## Pergunta 6
 
 `r kableExtra::text_spec("A modelagem multiescala quantifica as condições do ambiente em múltiplas escalas alterando o resolução ou a extensão da análise e, em seguida, avaliando qual das escalas consideradas  explica melhor um padrão ou processo. Escolha 1 espécie aquático e 1 espécie terrestre que ocorram na região a montante das hidrelétricas no Rio Araguari. Com base nas diferenças entre extensões (indicados no exemplo anterior) e as características funcionais das espécies (por exemplo área de vida), escolher as extensões mais adequadas para um estudo multiescala de cada espécie.", color = "blue", bold = TRUE)`
@@ -230,7 +229,7 @@ Passo 3 fazer o grafico:
 
 Para responder a pergunta você deve revisar as aulas ("ECOLOGIA DA PAISAGEM" e "Organização de paisagens") e o conteúdo no capitulo Escala.
 
-Como entender como a escala pode afetar a análise em diferentes ambientes? Existem diferenças importantes nos fatores a serem considerados entre os dois ambientes. Por exemplo, os rios são lineares, com direção (anisotropia), enquanto os terrestres são menos específicos. Como os padrões e escalas relevantes podem variar dependendo de fatores além das características funcionais das espécies como o tamanho do rio onde as espécies ocorrem. Em outras palavras, dependendo da espécie escolhida, é provável que haja fatores adicionais que precisam ser considerados.
+Como entender como a escala pode afetar a análise em diferentes ambientes? Existem diferenças importantes nos fatores a serem considerados entre os dois ambientes. Por exemplo, os rios são lineares, com direção (anisotropia), enquanto os terrestres são menos específicos. Os padrões e escalas relevantes podem variar dependendo de fatores além das características funcionais das espécies como o tamanho do rio onde as espécies ocorrem. Em outras palavras, dependendo da espécie escolhida, é provável que haja fatores adicionais que precisam ser considerados.
 
 Compreender os efeitos de escala é crucial para análises precisas e relevantes na ecologia da paisagem. As complexidades específicas associadas às florestas e aos rios realçam a necessidade de uma abordagem específica ao contexto para a selecção e análise da escala. Ao reconhecer e contabilizar as dependências de escala, os ecologistas paisagísticos podem obter conhecimentos mais profundos sobre as relações complexas entre padrões e processos ecológicos em diferentes extensões espaciais.
 

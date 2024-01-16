@@ -89,8 +89,7 @@ Usando a função `str()` nos mostra que entrevistas possui 106 linhas (uma linh
 
 ### resposta
 
-Para desenvolver a sua resposta, você deve olhar para exemplos de mamíferos que ocorrem na área de estudo [@Michalski2020int]. Em seguida, identifique os fatores que são conhecidos por serem importantes para diferentes espécies [@MICHALSKI2005383; @MICHALSKI2007conbio; @regolin2017forest].
-O que é apresentado aqui é uma estrutura fundamental. Use os exemplos para desenvolver suas próprias respostas.
+Para desenvolver a sua resposta, você deve olhar para exemplos de mamíferos que ocorrem na área de estudo [@Michalski2020int]. Em seguida, identifique os fatores que são conhecidos por serem importantes para diferentes espécies [@MICHALSKI2005383; @MICHALSKI2007conbio; @regolin2017forest]. O que é apresentado aqui é uma estrutura fundamental. Use os exemplos para desenvolver suas próprias respostas.
 
 #### Exemplos de fatores
 
@@ -99,20 +98,17 @@ Sabemos que os padrões na distribuição e abundância dos mamíferos respondem
 1.  Variabilidade em condições abióticos:\
     São aqueles relacionados ao ambiente físico, como clima, solo e topografia. Há muito pouca variação de altitude na área de estudo. Sabemos que os mamíferos são endotérmicos e, que em torno do equador há pouca variação climática num espaço do tamanho da área de estudo. Portanto, é muito pouco provável que o clima e altitude afecte os padrões dos mamíferos na área de estudo.
     -   Proximidade com o rio Amazonas.
-    
 2.  Interações bióticas:\
     São aqueles relacionados às interações entre os organismos, como predação, competição e mutualismo.
     -   Predação. A presença de predadores pode limitar a abundância de presas, como veados e capivaras.
     -   Interferência competitiva (interference competition), que ocorre quando indivíduos de espécies diferentes competem diretamente por recursos. Por exemplo, um gato-maracajá (*Leopardus wiedii*), um predador especialista e ágil de pequenas presas arbóreas, pode ser forçada a abandonar uma presa recém-capturada por uma jaguatirica (*Leopardus pardalis*), um predador maior e mais forte. Tais encontros podem limitar o sucesso de alimentação do gato-maracajá e potencialmente restringir a sua distribuição dentro do habitat partilhado.
     -   Liberação de mesopredadores (meso-predator release), em que a remoção de um predador de topo desencadeia consequências não intencionais para níveis tróficos inferiores. Por exemplo, quando a caça humana reduza as populações de onças-pintadas (*Panthera onca*), as jaguatiricas podem experimentar um aumento na abundância devido à redução da competição intraespecífica e da pressão de predação. No entanto, isso pode levar a um efeito dominó, com as populações de jaguatiricas aumentando e exercendo pressão crescente sobre presas menores, como roedores e aves. Isso perturba a teia alimentar do ecossistema e pode ter efeitos cascateantes nas comunidades de plantas e na biodiversidade geral.
-    
 3.  Distúrbios naturais e sucessão:\
     podem criar oportunidades para a colonização de novas áreas ou, por outro lado, podem levar à extinção de espécies.
     -   Incêndios florestais.
     -   Inundações.
     -   Ecótonos e áreas de transição entre diferentes tipos de habitats.
     -   Áreas que foram desmatadas, mas foram abandonadas e estão retornando à natureza.
-    
 4.  Padrões antrópicos no uso da terra:\
     São aqueles relacionados às atividades humanas, como desmatamento, agricultura, caça e mineração.
     -   Estradas.
@@ -121,23 +117,22 @@ Sabemos que os padrões na distribuição e abundância dos mamíferos respondem
     -   Uso da terra - agricultura.
     -   Perda de cobertura natural da terra.
 
-
 #### Exemplos de hipótese
+
 Existem centenas de hipóteses ecológicas potencialmente relevantes. Krebs (1972) sugeriu que: 'Ecologia é o estudo científico das interações que determinam a distribuição e abundância dos organismos'. Como tal, existe uma componente espacial associada a muitas (se não à maioria) das hipóteses ecológicas. São listados alguns exemplos que foram aplicados no contexto da ecologia da paisagem. Esta não é uma lista completa e é usada para fornecer exemplos ilustrativos. Os exemplos servem para ajudá-lo a desenvolver suas hipóteses que sejam relevantes para a área e espécie de estudo.
 
 A distribuição espacial e a abundância de mamíferos estão intrinsecamente ligadas a diversas características da paisagem, abrangendo condições abióticas, interações biológicas, perturbações e sucessão naturais e pressões induzidas pelo homem.
 
 2.  Interações bióticas:\
-    -   Predação. Teoria de forrageamento ideal (optimal foraging theory) - hipótese de abundância de presas (prey-abundance hypothesis) e a hipótese de captura de presas (prey-catchability hypothesis). 
+
+    -   Predação. Teoria de forrageamento ideal (optimal foraging theory) - hipótese de abundância de presas (prey-abundance hypothesis) e a hipótese de captura de presas (prey-catchability hypothesis).
     -   Presa. Hipótese de alocação de risco (risk allocation hypothesis).
-    
-  
-3.  Distúrbios naturais e sucessão:\    
-Distúrbios naturais e processos de sucessão moldam as comunidades de mamíferos. A Hipótese de Perturbação Intermediária (Intermediate Disturbance Hypothesis) propõe que níveis moderados de perturbação maximizam a biodiversidade. Pesquisas nas savanas brasileiras apoiam essa hipótese, com estudos indicando que frequências intermediárias de incêndios aumentam a diversidade de plantas e pequenos mamíferos.
 
-4.  Padrões antrópicos no uso da terra:\    
-Nas últimas duas décadas, os ecologistas adotaram o conceito de “paisagens do medo” (landscapes of fear) para descrever a variação espacial no risco de predação conforme percebido pelas presas em toda a sua área de alimentação ou área de vida [@gaynor2019landscapes]. Este conceito baseia-se nas disciplinas de ecologia comportamental, populacional, comunitária e espacial para considerar o papel do risco de predação espacialmente heterogêneo na condução do comportamento das presas e das cascatas tróficas. O termo “paisagem do medo” foi cunhado por Laundré e colegas em 2001 em seu artigo sobre vigilância de veados e bisões e comportamento de forrageamento em resposta à reintrodução de lobos em Yellowstone [@laundre2001wolves]. Os humanos remodelam paisagens de medo através da remoção e reintrodução de predadores, modificação de habitat e intensificação de atividades como caça e recreação. Predadores invasores ou mudanças de habitat induzidas pelo homem podem criar armadilhas ecológicas, nas quais as presas não conseguem otimizar o comportamento devido a paisagens anacrónicas de medo. Os humanos também representam um novo “superpredador”. Em locais onde há caça, a atividade humana letal cria paisagens de medo potencialmente novas para as espécies-alvo, com possíveis consequências para a fisiologia, a demografia das presas e a estrutura das comunidades humanos-naturais. No entanto, os animais percebem o risco dos humanos mesmo na ausência de reforço letal, e as paisagens antropogénicas de medo têm sido associadas a consequências demográficas. A importância relativa da paisagem do medo na formação da dinâmica populacional e das interacções entre espécies varia entre sistemas, e a actividade humana está a alterar e a criar novas paisagens de medo para os animais selvagens. Este é apenas um exemplo de como as hipóteses estão indo além da fragmentação florestal e dos limiares nos padrões espaciais.
+3.  Distúrbios naturais e sucessão: \
+    Distúrbios naturais e processos de sucessão moldam as comunidades de mamíferos. A Hipótese de Perturbação Intermediária (Intermediate Disturbance Hypothesis) propõe que níveis moderados de perturbação maximizam a biodiversidade. Pesquisas nas savanas brasileiras apoiam essa hipótese, com estudos indicando que frequências intermediárias de incêndios aumentam a diversidade de plantas e pequenos mamíferos.
 
+4.  Padrões antrópicos no uso da terra: \
+    Nas últimas duas décadas, os ecologistas adotaram o conceito de “paisagens do medo” (landscapes of fear) para descrever a variação espacial no risco de predação conforme percebido pelas presas em toda a sua área de alimentação ou área de vida [@gaynor2019landscapes]. Este conceito baseia-se nas disciplinas de ecologia comportamental, populacional, comunitária e espacial para considerar o papel do risco de predação espacialmente heterogêneo na condução do comportamento das presas e das cascatas tróficas. O termo “paisagem do medo” foi cunhado por Laundré e colegas em 2001 em seu artigo sobre vigilância de veados e bisões e comportamento de forrageamento em resposta à reintrodução de lobos em Yellowstone [@laundre2001wolves]. Os humanos remodelam paisagens de medo através da remoção e reintrodução de predadores, modificação de habitat e intensificação de atividades como caça e recreação. Predadores invasores ou mudanças de habitat induzidas pelo homem podem criar armadilhas ecológicas, nas quais as presas não conseguem otimizar o comportamento devido a paisagens anacrónicas de medo. Os humanos também representam um novo “superpredador”. Em locais onde há caça, a atividade humana letal cria paisagens de medo potencialmente novas para as espécies-alvo, com possíveis consequências para a fisiologia, a demografia das presas e a estrutura das comunidades humanos-naturais. No entanto, os animais percebem o risco dos humanos mesmo na ausência de reforço letal, e as paisagens antropogénicas de medo têm sido associadas a consequências demográficas. A importância relativa da paisagem do medo na formação da dinâmica populacional e das interacções entre espécies varia entre sistemas, e a actividade humana está a alterar e a criar novas paisagens de medo para os animais selvagens. Este é apenas um exemplo de como as hipóteses estão indo além da fragmentação florestal e dos limiares nos padrões espaciais.
 
 ## Pergunta 3
 
@@ -157,7 +152,7 @@ Para podermos identificar com maior certeza precisamos de mais detalhes sobre a 
 
 Para responder a esta pergunta, você precisa resumir os resultados. Isto pode ser feito de diferentes maneiras, por exemplo, comece com o resultado mais geral e importante e depois siga uma sequência lógica até o mais específico.
 
-1.   Todas as análises e resultados mostram que a presença de sppD tem uma forte relação positiva com a cobertura florestal.
+1.  Todas as análises e resultados mostram que a presença de sppD tem uma forte relação positiva com a cobertura florestal.
 
 2.  A análise da escala de efeito mostrou que na escala de 1 km a sppD estava presente quando havia em media aproximadamente 78% de cobertura florestal (boxplots). O modelo de regressão logística nesta mesma escala mostrou que foi obtida uma probabilidade de ocorrência de 50% com aproximadamente 70% de cobertura florestal.
 
@@ -167,14 +162,14 @@ Para responder a esta pergunta, você precisa resumir os resultados. Isto pode s
 
 A identificação de espécies de carnívoros na paisagem é uma tarefa complexa que pode ser dificultada pela falta de dados. Para podermos identificar a espécie "sppD" com maior certeza, precisamos de mais informações sobre sua taxonomia (que tipo de carnívoro é - Canidae, Felidae, Mephitidae, Mustelidae ou Procyonidae), características funcionais (como tamanho corporal e área de vida) e distribuição espacial.
 
-A distribuição espacial da espécie é um fator importante a ser considerado. Sabemos que a "sppD" está associada à floresta, mas não sabemos como sua distribuição (principalmente as ausências) é afetada por outros fatores, como os impactos humanos.  A inclusão de variáveis adicionais para representar outros fatores, como os impactos humanos, pode melhorar o modelo de distribuição da espécie e fornecer estimativas mais precisas da escala do efeito. 
-
+A distribuição espacial da espécie é um fator importante a ser considerado. Sabemos que a "sppD" está associada à floresta, mas não sabemos como sua distribuição (principalmente as ausências) é afetada por outros fatores, como os impactos humanos. A inclusão de variáveis adicionais para representar outros fatores, como os impactos humanos, pode melhorar o modelo de distribuição da espécie e fornecer estimativas mais precisas da escala do efeito.
 
 ## Pergunta 5
 
 `r kableExtra::text_spec('O que sabemos sobre as três espécies de carnívoros? Com base nos resultados obtidos: boxplots, graficos com a relação entre occorencia e proporção de floresta, resultados sobre escala do efeito e os artigos (Michalski & Peres 2005; Michalski & Peres 2007; Regolin et. al. 2017), forneça uma identificação (nome científico e nome comum) e caracterização de cada espécie (por exemplo, especialista/generalista/sensível/resiliente). Justifique a sua identificação, caracterização e interpretações com resultados específicos, destacando os resultados com maior relevância. Que informações/resultados adicionais o ajudariam a caracterizar as espécies com maior certeza? Justifique suas escolhas de forma clara e concisa.', color = "blue", bold = TRUE)`
 
 ### resposta
+
 Use a leitura sugerida e o exemplo de resposta 4 para responder a esta pergunta.
 
 ## Pergunta 6
@@ -182,4 +177,5 @@ Use a leitura sugerida e o exemplo de resposta 4 para responder a esta pergunta.
 `r kableExtra::text_spec("Vimos como a incerteza quanto à escala do efeito é provavelmente, pelo menos em parte, uma consequência da  correlação entre escalas. Também é possível que, além da cobertura florestal, existam outros fatores que afetem a ocorrência das três espécies na paisagem estudada.  Usando como base o conteudo das aulas, leitura disponivel no Google Classroom (Base teórica 4 Dados, métricas, analises), e/ou exemplos apresentados aqui no capitulo, apresentam algumas hipóteses alternativas que poderiam explicar a incerteza nos modelos para as três espécies. Forneça recomendações para variáveis adicionais que poderiam ser incluídas nos modelos para testar suas hipóteses. Justifique sua seleção de forma clara e concisa, apoie sua escolha com exemplos da literatura científica.", color = "blue", bold = TRUE)`
 
 ### resposta
+
 Use a leitura sugerida e o exemplos de respostas anteriores para responder a esta pergunta.
